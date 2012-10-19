@@ -1,0 +1,604 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F2454311630612A004BF6AB /* environment.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F24542C1630612A004BF6AB /* environment.jpg */; };
+		3F2454321630612A004BF6AB /* fun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F24542D1630612A004BF6AB /* fun.jpg */; };
+		3F2454331630612A004BF6AB /* history.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F24542E1630612A004BF6AB /* history.jpg */; };
+		3F2454341630612A004BF6AB /* housing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F24542F1630612A004BF6AB /* housing.jpg */; };
+		3F2454351630612A004BF6AB /* people.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F2454301630612A004BF6AB /* people.jpg */; };
+		3F24543916307A5D004BF6AB /* nav-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F24543816307A5D004BF6AB /* nav-bg.png */; };
+		3F24543B16307F40004BF6AB /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F24543A16307F40004BF6AB /* Default.png */; };
+		3F24543D16307FA9004BF6AB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F24543C16307FA9004BF6AB /* Default@2x.png */; };
+		3F24543F1630801E004BF6AB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F24543E1630801E004BF6AB /* Default-568h@2x.png */; };
+		3F24544116308236004BF6AB /* icon_144.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F24544016308236004BF6AB /* icon_144.png */; };
+		3F2454431630823A004BF6AB /* icon_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2454421630823A004BF6AB /* icon_57.png */; };
+		3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D6FCD161C9A57001E7791 /* MapKit.framework */; };
+		3F2D6FD1161CB614001E7791 /* MapPinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F2D6FD0161CB614001E7791 /* MapPinAnnotation.m */; };
+		3F5FD229161B698B008F4B9B /* SFLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FD228161B698B008F4B9B /* SFLocationViewController.m */; };
+		3F5FD22D161B6A4A008F4B9B /* SFLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FD22C161B6A4A008F4B9B /* SFLocationView.m */; };
+		3F5FD230161B6EF9008F4B9B /* SFRadarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FD22F161B6EF9008F4B9B /* SFRadarView.m */; };
+		3F5FD233161B6F17008F4B9B /* SFRadarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5FD232161B6F17008F4B9B /* SFRadarViewController.m */; };
+		3F7D55E8162C861900D6A48E /* 61-sunlight.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7D55E6162C861900D6A48E /* 61-sunlight.png */; };
+		3F7D55E9162C861900D6A48E /* 61-sunlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F7D55E7162C861900D6A48E /* 61-sunlight@2x.png */; };
+		3F9969991614A8380032CCB8 /* SFPaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F9969981614A8380032CCB8 /* SFPaneViewController.m */; };
+		3FC5C9A516139ECF0078EA3A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5C9A416139ECF0078EA3A /* QuartzCore.framework */; };
+		3FD00CE316133E6B0096596F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE216133E6B0096596F /* UIKit.framework */; };
+		3FD00CE516133E6B0096596F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE416133E6B0096596F /* Foundation.framework */; };
+		3FD00CE716133E6B0096596F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE616133E6B0096596F /* CoreGraphics.framework */; };
+		3FD00CED16133E6B0096596F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00CEB16133E6B0096596F /* InfoPlist.strings */; };
+		3FD00CEF16133E6B0096596F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD00CEE16133E6B0096596F /* main.m */; };
+		3FD00CF316133E6B0096596F /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD00CF216133E6B0096596F /* SFAppDelegate.m */; };
+		3FD00CF516133E6C0096596F /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00CF416133E6C0096596F /* Default.png */; };
+		3FD00CF716133E6C0096596F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00CF616133E6C0096596F /* Default@2x.png */; };
+		3FD00CF916133E6C0096596F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00CF816133E6C0096596F /* Default-568h@2x.png */; };
+		3FD00D0116133E6C0096596F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00D0016133E6C0096596F /* SenTestingKit.framework */; };
+		3FD00D0216133E6C0096596F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE216133E6B0096596F /* UIKit.framework */; };
+		3FD00D0316133E6C0096596F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE416133E6B0096596F /* Foundation.framework */; };
+		3FD00D0B16133E6C0096596F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00D0916133E6C0096596F /* InfoPlist.strings */; };
+		3FD00D0E16133E6C0096596F /* Sitegeist_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD00D0D16133E6C0096596F /* Sitegeist_iOSTests.m */; };
+		3FD00D191613419F0096596F /* SFSitegeistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD00D181613419F0096596F /* SFSitegeistViewController.m */; };
+		3FD00D1E161362BA0096596F /* SFPaneView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD00D1D161362BA0096596F /* SFPaneView.m */; };
+		3FD00D21161363C90096596F /* 73-radar.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00D1F161363C90096596F /* 73-radar.png */; };
+		3FD00D22161363C90096596F /* 73-radar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00D20161363C90096596F /* 73-radar@2x.png */; };
+		3FD00D25161364550096596F /* 74-location.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00D23161364550096596F /* 74-location.png */; };
+		3FD00D26161364550096596F /* 74-location@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00D24161364550096596F /* 74-location@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3FD00D0416133E6C0096596F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3FD00CD516133E6B0096596F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3FD00CDD16133E6B0096596F;
+			remoteInfo = "Sitegeist iOS";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3F24542C1630612A004BF6AB /* environment.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = environment.jpg; sourceTree = "<group>"; };
+		3F24542D1630612A004BF6AB /* fun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = fun.jpg; sourceTree = "<group>"; };
+		3F24542E1630612A004BF6AB /* history.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = history.jpg; sourceTree = "<group>"; };
+		3F24542F1630612A004BF6AB /* housing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housing.jpg; sourceTree = "<group>"; };
+		3F2454301630612A004BF6AB /* people.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = people.jpg; sourceTree = "<group>"; };
+		3F24543816307A5D004BF6AB /* nav-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "nav-bg.png"; sourceTree = "<group>"; };
+		3F24543A16307F40004BF6AB /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3F24543C16307FA9004BF6AB /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3F24543E1630801E004BF6AB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3F24544016308236004BF6AB /* icon_144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_144.png; sourceTree = "<group>"; };
+		3F2454421630823A004BF6AB /* icon_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_57.png; sourceTree = "<group>"; };
+		3F2D6FCD161C9A57001E7791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F2D6FD0161CB614001E7791 /* MapPinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPinAnnotation.m; sourceTree = "<group>"; };
+		3F2D6FD2161CB7EB001E7791 /* MapPinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPinAnnotation.h; sourceTree = SOURCE_ROOT; };
+		3F5FD227161B698B008F4B9B /* SFLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFLocationViewController.h; path = "Sitegeist iOS/SFLocationViewController.h"; sourceTree = "<group>"; };
+		3F5FD228161B698B008F4B9B /* SFLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFLocationViewController.m; path = "Sitegeist iOS/SFLocationViewController.m"; sourceTree = "<group>"; };
+		3F5FD22B161B6A4A008F4B9B /* SFLocationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFLocationView.h; path = "Sitegeist iOS/SFLocationView.h"; sourceTree = "<group>"; };
+		3F5FD22C161B6A4A008F4B9B /* SFLocationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFLocationView.m; path = "Sitegeist iOS/SFLocationView.m"; sourceTree = "<group>"; };
+		3F5FD22E161B6EF9008F4B9B /* SFRadarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFRadarView.h; path = "Sitegeist iOS/SFRadarView.h"; sourceTree = "<group>"; };
+		3F5FD22F161B6EF9008F4B9B /* SFRadarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFRadarView.m; path = "Sitegeist iOS/SFRadarView.m"; sourceTree = "<group>"; };
+		3F5FD231161B6F17008F4B9B /* SFRadarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFRadarViewController.h; path = "Sitegeist iOS/SFRadarViewController.h"; sourceTree = "<group>"; };
+		3F5FD232161B6F17008F4B9B /* SFRadarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFRadarViewController.m; path = "Sitegeist iOS/SFRadarViewController.m"; sourceTree = "<group>"; };
+		3F7D55E6162C861900D6A48E /* 61-sunlight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "61-sunlight.png"; path = "Sitegeist iOS/61-sunlight.png"; sourceTree = "<group>"; };
+		3F7D55E7162C861900D6A48E /* 61-sunlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "61-sunlight@2x.png"; path = "Sitegeist iOS/61-sunlight@2x.png"; sourceTree = "<group>"; };
+		3F9969971614A8380032CCB8 /* SFPaneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPaneViewController.h; sourceTree = "<group>"; };
+		3F9969981614A8380032CCB8 /* SFPaneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFPaneViewController.m; sourceTree = "<group>"; };
+		3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sitegeist iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sitegeist iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3FC5C9A416139ECF0078EA3A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3FD00CE216133E6B0096596F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3FD00CE416133E6B0096596F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3FD00CE616133E6B0096596F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3FD00CEA16133E6B0096596F /* Sitegeist iOS-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Sitegeist iOS-Info.plist"; path = "Sitegeist iOS/Sitegeist iOS-Info.plist"; sourceTree = "<group>"; };
+		3FD00CEC16133E6B0096596F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FD00CEE16133E6B0096596F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3FD00CF016133E6B0096596F /* Sitegeist iOS-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sitegeist iOS-Prefix.pch"; sourceTree = "<group>"; };
+		3FD00CF116133E6B0096596F /* SFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SFAppDelegate.h; path = "Sitegeist iOS/SFAppDelegate.h"; sourceTree = "<group>"; };
+		3FD00CF216133E6B0096596F /* SFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SFAppDelegate.m; path = "Sitegeist iOS/SFAppDelegate.m"; sourceTree = "<group>"; };
+		3FD00CF416133E6C0096596F /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = "Sitegeist iOS/Default.png"; sourceTree = "<group>"; };
+		3FD00CF616133E6C0096596F /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Sitegeist iOS/Default@2x.png"; sourceTree = "<group>"; };
+		3FD00CF816133E6C0096596F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Sitegeist iOS/Default-568h@2x.png"; sourceTree = "<group>"; };
+		3FD00D0016133E6C0096596F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		3FD00D0816133E6C0096596F /* Sitegeist iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sitegeist iOSTests-Info.plist"; sourceTree = "<group>"; };
+		3FD00D0A16133E6C0096596F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3FD00D0C16133E6C0096596F /* Sitegeist_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sitegeist_iOSTests.h; sourceTree = "<group>"; };
+		3FD00D0D16133E6C0096596F /* Sitegeist_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sitegeist_iOSTests.m; sourceTree = "<group>"; };
+		3FD00D171613419F0096596F /* SFSitegeistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFSitegeistViewController.h; path = "Sitegeist iOS/SFSitegeistViewController.h"; sourceTree = "<group>"; };
+		3FD00D181613419F0096596F /* SFSitegeistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFSitegeistViewController.m; path = "Sitegeist iOS/SFSitegeistViewController.m"; sourceTree = "<group>"; };
+		3FD00D1C161362BA0096596F /* SFPaneView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SFPaneView.h; path = "Sitegeist iOS/SFPaneView.h"; sourceTree = "<group>"; };
+		3FD00D1D161362BA0096596F /* SFPaneView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SFPaneView.m; path = "Sitegeist iOS/SFPaneView.m"; sourceTree = "<group>"; };
+		3FD00D1F161363C90096596F /* 73-radar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "73-radar.png"; path = "Sitegeist iOS/73-radar.png"; sourceTree = "<group>"; };
+		3FD00D20161363C90096596F /* 73-radar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "73-radar@2x.png"; path = "Sitegeist iOS/73-radar@2x.png"; sourceTree = "<group>"; };
+		3FD00D23161364550096596F /* 74-location.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "74-location.png"; path = "Sitegeist iOS/74-location.png"; sourceTree = "<group>"; };
+		3FD00D24161364550096596F /* 74-location@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "74-location@2x.png"; path = "Sitegeist iOS/74-location@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3FD00CDB16133E6B0096596F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */,
+				3FC5C9A516139ECF0078EA3A /* QuartzCore.framework in Frameworks */,
+				3FD00CE316133E6B0096596F /* UIKit.framework in Frameworks */,
+				3FD00CE516133E6B0096596F /* Foundation.framework in Frameworks */,
+				3FD00CE716133E6B0096596F /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD00CFB16133E6C0096596F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD00D0116133E6C0096596F /* SenTestingKit.framework in Frameworks */,
+				3FD00D0216133E6C0096596F /* UIKit.framework in Frameworks */,
+				3FD00D0316133E6C0096596F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F0D43B3162E0AFA009BD4A6 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				3F2D6FD2161CB7EB001E7791 /* MapPinAnnotation.h */,
+				3F2D6FD0161CB614001E7791 /* MapPinAnnotation.m */,
+				3FD00CF116133E6B0096596F /* SFAppDelegate.h */,
+				3FD00CF216133E6B0096596F /* SFAppDelegate.m */,
+				3FD00D171613419F0096596F /* SFSitegeistViewController.h */,
+				3FD00D181613419F0096596F /* SFSitegeistViewController.m */,
+				3F5FD22B161B6A4A008F4B9B /* SFLocationView.h */,
+				3F5FD22C161B6A4A008F4B9B /* SFLocationView.m */,
+				3F5FD227161B698B008F4B9B /* SFLocationViewController.h */,
+				3F5FD228161B698B008F4B9B /* SFLocationViewController.m */,
+				3F5FD22E161B6EF9008F4B9B /* SFRadarView.h */,
+				3F5FD22F161B6EF9008F4B9B /* SFRadarView.m */,
+				3F5FD231161B6F17008F4B9B /* SFRadarViewController.h */,
+				3F5FD232161B6F17008F4B9B /* SFRadarViewController.m */,
+				3FD00D1C161362BA0096596F /* SFPaneView.h */,
+				3FD00D1D161362BA0096596F /* SFPaneView.m */,
+				3F9969971614A8380032CCB8 /* SFPaneViewController.h */,
+				3F9969981614A8380032CCB8 /* SFPaneViewController.m */,
+			);
+			name = Classes;
+			path = "/Users/Jeremy/Projects/Sitegeist iOS";
+			sourceTree = "<absolute>";
+		};
+		3F24542A16306117004BF6AB /* Mockups */ = {
+			isa = PBXGroup;
+			children = (
+				3F24542C1630612A004BF6AB /* environment.jpg */,
+				3F24542D1630612A004BF6AB /* fun.jpg */,
+				3F24542E1630612A004BF6AB /* history.jpg */,
+				3F24542F1630612A004BF6AB /* housing.jpg */,
+				3F2454301630612A004BF6AB /* people.jpg */,
+			);
+			name = Mockups;
+			sourceTree = "<group>";
+		};
+		3F24543616307A42004BF6AB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00CEA16133E6B0096596F /* Sitegeist iOS-Info.plist */,
+				3F24543716307A4B004BF6AB /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3F24543716307A4B004BF6AB /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00CF416133E6C0096596F /* Default.png */,
+				3FD00CF616133E6C0096596F /* Default@2x.png */,
+				3FD00CF816133E6C0096596F /* Default-568h@2x.png */,
+				3F7D55E6162C861900D6A48E /* 61-sunlight.png */,
+				3F7D55E7162C861900D6A48E /* 61-sunlight@2x.png */,
+				3FD00D23161364550096596F /* 74-location.png */,
+				3FD00D24161364550096596F /* 74-location@2x.png */,
+				3FD00D1F161363C90096596F /* 73-radar.png */,
+				3FD00D20161363C90096596F /* 73-radar@2x.png */,
+				3F24543816307A5D004BF6AB /* nav-bg.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		3FD00CD316133E6B0096596F = {
+			isa = PBXGroup;
+			children = (
+				3F2454421630823A004BF6AB /* icon_57.png */,
+				3F24544016308236004BF6AB /* icon_144.png */,
+				3F24543E1630801E004BF6AB /* Default-568h@2x.png */,
+				3F24543C16307FA9004BF6AB /* Default@2x.png */,
+				3F24543A16307F40004BF6AB /* Default.png */,
+				3F24543616307A42004BF6AB /* Resources */,
+				3F24542A16306117004BF6AB /* Mockups */,
+				3F0D43B3162E0AFA009BD4A6 /* Classes */,
+				3F2D6FCD161C9A57001E7791 /* MapKit.framework */,
+				3FC5C9A416139ECF0078EA3A /* QuartzCore.framework */,
+				3FD00CE816133E6B0096596F /* Sitegeist iOS */,
+				3FD00D0616133E6C0096596F /* Sitegeist iOSTests */,
+				3FD00CE116133E6B0096596F /* Frameworks */,
+				3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */,
+				3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */,
+			);
+			sourceTree = "<group>";
+			usesTabs = 0;
+		};
+		3FD00CE116133E6B0096596F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00CE216133E6B0096596F /* UIKit.framework */,
+				3FD00CE416133E6B0096596F /* Foundation.framework */,
+				3FD00CE616133E6B0096596F /* CoreGraphics.framework */,
+				3FD00D0016133E6C0096596F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3FD00CE816133E6B0096596F /* Sitegeist iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00CE916133E6B0096596F /* Supporting Files */,
+			);
+			path = "Sitegeist iOS";
+			sourceTree = "<group>";
+		};
+		3FD00CE916133E6B0096596F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00CEB16133E6B0096596F /* InfoPlist.strings */,
+				3FD00CEE16133E6B0096596F /* main.m */,
+				3FD00CF016133E6B0096596F /* Sitegeist iOS-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FD00D0616133E6C0096596F /* Sitegeist iOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00D0C16133E6C0096596F /* Sitegeist_iOSTests.h */,
+				3FD00D0D16133E6C0096596F /* Sitegeist_iOSTests.m */,
+				3FD00D0716133E6C0096596F /* Supporting Files */,
+			);
+			path = "Sitegeist iOSTests";
+			sourceTree = "<group>";
+		};
+		3FD00D0716133E6C0096596F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3FD00D0816133E6C0096596F /* Sitegeist iOSTests-Info.plist */,
+				3FD00D0916133E6C0096596F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3FD00CDD16133E6B0096596F /* Sitegeist iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD00D1116133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOS" */;
+			buildPhases = (
+				3FD00CDA16133E6B0096596F /* Sources */,
+				3FD00CDB16133E6B0096596F /* Frameworks */,
+				3FD00CDC16133E6B0096596F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sitegeist iOS";
+			productName = "Sitegeist iOS";
+			productReference = 3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3FD00CFE16133E6C0096596F /* Sitegeist iOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3FD00D1416133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOSTests" */;
+			buildPhases = (
+				3FD00CFA16133E6C0096596F /* Sources */,
+				3FD00CFB16133E6C0096596F /* Frameworks */,
+				3FD00CFC16133E6C0096596F /* Resources */,
+				3FD00CFD16133E6C0096596F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3FD00D0516133E6C0096596F /* PBXTargetDependency */,
+			);
+			name = "Sitegeist iOSTests";
+			productName = "Sitegeist iOSTests";
+			productReference = 3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FD00CD516133E6B0096596F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SF;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Sunlight Foundation";
+			};
+			buildConfigurationList = 3FD00CD816133E6B0096596F /* Build configuration list for PBXProject "Sitegeist iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3FD00CD316133E6B0096596F;
+			productRefGroup = 3FD00CD316133E6B0096596F;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3FD00CDD16133E6B0096596F /* Sitegeist iOS */,
+				3FD00CFE16133E6C0096596F /* Sitegeist iOSTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3FD00CDC16133E6B0096596F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD00CED16133E6B0096596F /* InfoPlist.strings in Resources */,
+				3FD00CF516133E6C0096596F /* Default.png in Resources */,
+				3FD00CF716133E6C0096596F /* Default@2x.png in Resources */,
+				3FD00CF916133E6C0096596F /* Default-568h@2x.png in Resources */,
+				3FD00D21161363C90096596F /* 73-radar.png in Resources */,
+				3FD00D22161363C90096596F /* 73-radar@2x.png in Resources */,
+				3FD00D25161364550096596F /* 74-location.png in Resources */,
+				3FD00D26161364550096596F /* 74-location@2x.png in Resources */,
+				3F7D55E8162C861900D6A48E /* 61-sunlight.png in Resources */,
+				3F7D55E9162C861900D6A48E /* 61-sunlight@2x.png in Resources */,
+				3F2454311630612A004BF6AB /* environment.jpg in Resources */,
+				3F2454321630612A004BF6AB /* fun.jpg in Resources */,
+				3F2454331630612A004BF6AB /* history.jpg in Resources */,
+				3F2454341630612A004BF6AB /* housing.jpg in Resources */,
+				3F2454351630612A004BF6AB /* people.jpg in Resources */,
+				3F24543916307A5D004BF6AB /* nav-bg.png in Resources */,
+				3F24543B16307F40004BF6AB /* Default.png in Resources */,
+				3F24543D16307FA9004BF6AB /* Default@2x.png in Resources */,
+				3F24543F1630801E004BF6AB /* Default-568h@2x.png in Resources */,
+				3F24544116308236004BF6AB /* icon_144.png in Resources */,
+				3F2454431630823A004BF6AB /* icon_57.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD00CFC16133E6C0096596F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD00D0B16133E6C0096596F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FD00CFD16133E6C0096596F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FD00CDA16133E6B0096596F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD00CEF16133E6B0096596F /* main.m in Sources */,
+				3FD00CF316133E6B0096596F /* SFAppDelegate.m in Sources */,
+				3FD00D191613419F0096596F /* SFSitegeistViewController.m in Sources */,
+				3FD00D1E161362BA0096596F /* SFPaneView.m in Sources */,
+				3F9969991614A8380032CCB8 /* SFPaneViewController.m in Sources */,
+				3F5FD229161B698B008F4B9B /* SFLocationViewController.m in Sources */,
+				3F5FD22D161B6A4A008F4B9B /* SFLocationView.m in Sources */,
+				3F5FD230161B6EF9008F4B9B /* SFRadarView.m in Sources */,
+				3F5FD233161B6F17008F4B9B /* SFRadarViewController.m in Sources */,
+				3F2D6FD1161CB614001E7791 /* MapPinAnnotation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FD00CFA16133E6C0096596F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FD00D0E16133E6C0096596F /* Sitegeist_iOSTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3FD00D0516133E6C0096596F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3FD00CDD16133E6B0096596F /* Sitegeist iOS */;
+			targetProxy = 3FD00D0416133E6C0096596F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3FD00CEB16133E6B0096596F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD00CEC16133E6B0096596F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3FD00D0916133E6C0096596F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3FD00D0A16133E6C0096596F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3FD00D0F16133E6C0096596F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3FD00D1016133E6C0096596F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sunlight Foundation";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Sunlight Foundation";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "637E5BFC-DDA6-4AB5-B365-1A134E55C47A";
+				"PROVISIONING_PROFILE[sdk=*]" = "637E5BFC-DDA6-4AB5-B365-1A134E55C47A";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3FD00D1216133E6C0096596F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sitegeist iOS/Sitegeist iOS-Prefix.pch";
+				INFOPLIST_FILE = "Sitegeist iOS/Sitegeist iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3FD00D1316133E6C0096596F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sitegeist iOS/Sitegeist iOS-Prefix.pch";
+				INFOPLIST_FILE = "Sitegeist iOS/Sitegeist iOS-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		3FD00D1516133E6C0096596F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sitegeist iOS.app/Sitegeist iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sitegeist iOS/Sitegeist iOS-Prefix.pch";
+				INFOPLIST_FILE = "Sitegeist iOSTests/Sitegeist iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		3FD00D1616133E6C0096596F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sitegeist iOS.app/Sitegeist iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sitegeist iOS/Sitegeist iOS-Prefix.pch";
+				INFOPLIST_FILE = "Sitegeist iOSTests/Sitegeist iOSTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3FD00CD816133E6B0096596F /* Build configuration list for PBXProject "Sitegeist iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD00D0F16133E6C0096596F /* Debug */,
+				3FD00D1016133E6C0096596F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD00D1116133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD00D1216133E6C0096596F /* Debug */,
+				3FD00D1316133E6C0096596F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3FD00D1416133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3FD00D1516133E6C0096596F /* Debug */,
+				3FD00D1616133E6C0096596F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FD00CD516133E6B0096596F /* Project object */;
+}
