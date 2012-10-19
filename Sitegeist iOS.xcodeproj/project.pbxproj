@@ -11,7 +11,6 @@
 		3F0CFE281631AEFB00FAA6DD /* SFPaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE161631AEFB00FAA6DD /* SFPaneViewController.m */; };
 		3F0CFE291631AEFB00FAA6DD /* SFRadarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE181631AEFB00FAA6DD /* SFRadarViewController.m */; };
 		3F0CFE2A1631AEFB00FAA6DD /* SFSitegeistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE1A1631AEFB00FAA6DD /* SFSitegeistViewController.m */; };
-		3F0CFE2B1631AEFB00FAA6DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE1B1631AEFB00FAA6DD /* main.m */; };
 		3F0CFE2C1631AEFB00FAA6DD /* MapPinAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE1D1631AEFB00FAA6DD /* MapPinAnnotation.m */; };
 		3F0CFE2D1631AEFB00FAA6DD /* SFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE1F1631AEFB00FAA6DD /* SFAppDelegate.m */; };
 		3F0CFE2E1631AEFB00FAA6DD /* SFLocationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE221631AEFB00FAA6DD /* SFLocationView.m */; };
@@ -36,6 +35,7 @@
 		3F0CFE591631AF0100FAA6DD /* housing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE451631AF0100FAA6DD /* housing.jpg */; };
 		3F0CFE5A1631AF0100FAA6DD /* people.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE461631AF0100FAA6DD /* people.jpg */; };
 		3F0CFE5B1631AF0100FAA6DD /* Sitegeist iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE471631AF0100FAA6DD /* Sitegeist iOS-Info.plist */; };
+		3F0CFE5F1631B2B200FAA6DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE5D1631B2B200FAA6DD /* main.m */; };
 		3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D6FCD161C9A57001E7791 /* MapKit.framework */; };
 		3FC5C9A516139ECF0078EA3A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5C9A416139ECF0078EA3A /* QuartzCore.framework */; };
 		3FD00CE316133E6B0096596F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE216133E6B0096596F /* UIKit.framework */; };
@@ -67,7 +67,6 @@
 		3F0CFE181631AEFB00FAA6DD /* SFRadarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFRadarViewController.m; sourceTree = "<group>"; };
 		3F0CFE191631AEFB00FAA6DD /* SFSitegeistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFSitegeistViewController.h; sourceTree = "<group>"; };
 		3F0CFE1A1631AEFB00FAA6DD /* SFSitegeistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFSitegeistViewController.m; sourceTree = "<group>"; };
-		3F0CFE1B1631AEFB00FAA6DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F0CFE1C1631AEFB00FAA6DD /* MapPinAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapPinAnnotation.h; sourceTree = "<group>"; };
 		3F0CFE1D1631AEFB00FAA6DD /* MapPinAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapPinAnnotation.m; sourceTree = "<group>"; };
 		3F0CFE1E1631AEFB00FAA6DD /* SFAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAppDelegate.h; sourceTree = "<group>"; };
@@ -97,7 +96,8 @@
 		3F0CFE451631AF0100FAA6DD /* housing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housing.jpg; sourceTree = "<group>"; };
 		3F0CFE461631AF0100FAA6DD /* people.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = people.jpg; sourceTree = "<group>"; };
 		3F0CFE471631AF0100FAA6DD /* Sitegeist iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sitegeist iOS-Info.plist"; sourceTree = "<group>"; };
-		3F0CFE481631AF0100FAA6DD /* Sitegeist iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sitegeist iOS-Prefix.pch"; sourceTree = "<group>"; };
+		3F0CFE5D1631B2B200FAA6DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F0CFE5E1631B2B200FAA6DD /* Sitegeist iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sitegeist iOS-Prefix.pch"; sourceTree = "<group>"; };
 		3F2D6FCD161C9A57001E7791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sitegeist iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sitegeist iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -143,7 +143,6 @@
 			children = (
 				3F0CFE121631AEFB00FAA6DD /* Controllers */,
 				3F0CFE201631AEFB00FAA6DD /* Views */,
-				3F0CFE1B1631AEFB00FAA6DD /* main.m */,
 				3F0CFE1C1631AEFB00FAA6DD /* MapPinAnnotation.h */,
 				3F0CFE1D1631AEFB00FAA6DD /* MapPinAnnotation.m */,
 				3F0CFE1E1631AEFB00FAA6DD /* SFAppDelegate.h */,
@@ -187,7 +186,6 @@
 				3F0CFE341631AF0100FAA6DD /* Images */,
 				3F0CFE411631AF0100FAA6DD /* Mockups */,
 				3F0CFE471631AF0100FAA6DD /* Sitegeist iOS-Info.plist */,
-				3F0CFE481631AF0100FAA6DD /* Sitegeist iOS-Prefix.pch */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -223,10 +221,20 @@
 			path = Mockups;
 			sourceTree = "<group>";
 		};
+		3F0CFE5C1631B2B200FAA6DD /* Other Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3F0CFE5D1631B2B200FAA6DD /* main.m */,
+				3F0CFE5E1631B2B200FAA6DD /* Sitegeist iOS-Prefix.pch */,
+			);
+			path = "Other Sources";
+			sourceTree = "<group>";
+		};
 		3FD00CD316133E6B0096596F = {
 			isa = PBXGroup;
 			children = (
 				3F0CFE111631AEFB00FAA6DD /* Classes */,
+				3F0CFE5C1631B2B200FAA6DD /* Other Sources */,
 				3F0CFE311631AF0100FAA6DD /* Resources */,
 				3FD00D0616133E6C0096596F /* Sitegeist iOSTests */,
 				3FD00CE116133E6B0096596F /* Frameworks */,
@@ -397,12 +405,12 @@
 				3F0CFE281631AEFB00FAA6DD /* SFPaneViewController.m in Sources */,
 				3F0CFE291631AEFB00FAA6DD /* SFRadarViewController.m in Sources */,
 				3F0CFE2A1631AEFB00FAA6DD /* SFSitegeistViewController.m in Sources */,
-				3F0CFE2B1631AEFB00FAA6DD /* main.m in Sources */,
 				3F0CFE2C1631AEFB00FAA6DD /* MapPinAnnotation.m in Sources */,
 				3F0CFE2D1631AEFB00FAA6DD /* SFAppDelegate.m in Sources */,
 				3F0CFE2E1631AEFB00FAA6DD /* SFLocationView.m in Sources */,
 				3F0CFE2F1631AEFB00FAA6DD /* SFPaneView.m in Sources */,
 				3F0CFE301631AEFB00FAA6DD /* SFRadarView.m in Sources */,
+				3F0CFE5F1631B2B200FAA6DD /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -503,7 +511,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Resources/Sitegeist iOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "Other Sources/Sitegeist iOS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Sitegeist iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -515,7 +523,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Resources/Sitegeist iOS-Prefix.pch";
+				GCC_PREFIX_HEADER = "Other Sources/Sitegeist iOS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Sitegeist iOS-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
