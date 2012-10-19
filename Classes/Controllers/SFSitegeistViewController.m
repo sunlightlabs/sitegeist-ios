@@ -8,6 +8,7 @@
 
 #import "SFLoadingView.h"
 #import "SFPaneView.h"
+#import "SFAboutViewController.h"
 #import "SFLocationViewController.h"
 #import "SFRadarViewController.h"
 #import "SFSitegeistViewController.h"
@@ -46,12 +47,12 @@
     
     UIButton *sunlightButton = [[UIButton alloc] init];
     [sunlightButton setImage:[UIImage imageNamed:@"61-sunlight"] forState:UIControlStateNormal];
-    [sunlightButton addTarget:self action:@selector(about) forControlEvents:UIControlEventTouchUpInside];
+    [sunlightButton addTarget:self action:@selector(showAboutView) forControlEvents:UIControlEventTouchUpInside];
     [sunlightButton setFrame:CGRectMake(0, 0, 27, 27)];
     
     UIButton *locationButton = [[UIButton alloc] init];
     [locationButton setImage:[UIImage imageNamed:@"74-location"] forState:UIControlStateNormal];
-    [locationButton addTarget:self action:@selector(locate) forControlEvents:UIControlEventTouchUpInside];
+    [locationButton addTarget:self action:@selector(showLocationView) forControlEvents:UIControlEventTouchUpInside];
     [locationButton setFrame:CGRectMake(0, 0, 27, 27)];
     
 //    UIBarButtonItem *sunlightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"61-sunlight"]
@@ -139,15 +140,14 @@
     [self.parentViewController.view addSubview:self.loadingView];
 }
 
-- (void)locate
+- (void)showLocationView
 {
     [self presentModalViewController:[[SFLocationViewController alloc] init] animated:YES];
 }
 
-- (void)about
+- (void)showAboutView
 {
-    [self showLoadingMessage:@"Refreshing data"];
-//    [self presentModalViewController:[[SFRadarViewController alloc] init] animated:YES];
+    [self presentModalViewController:[[SFAboutViewController alloc] init] animated:YES];
 }
 
 - (void)paginate:(id)sender forEvent:(UIEvent *)event
@@ -162,7 +162,7 @@
 
 - (void)reloadCurrentPane
 {
-
+    [self showLoadingMessage:@"Refreshing data"];
 }
 
 - (void)nextPane

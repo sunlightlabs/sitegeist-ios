@@ -50,6 +50,7 @@
 		3F0CFEAB1631C4C000FAA6DD /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE9E1631C4BF00FAA6DD /* README.md */; };
 		3F0CFEAC1631C4C000FAA6DD /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE9F1631C4C000FAA6DD /* release_notes.md */; };
 		3F0CFEAF1631C7D600FAA6DD /* SFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFEAE1631C7D600FAA6DD /* SFLoadingView.m */; };
+		3F0CFEB21631E2F400FAA6DD /* SFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */; };
 		3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D6FCD161C9A57001E7791 /* MapKit.framework */; };
 		3FC5C9A516139ECF0078EA3A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FC5C9A416139ECF0078EA3A /* QuartzCore.framework */; };
 		3FD00CE316133E6B0096596F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE216133E6B0096596F /* UIKit.framework */; };
@@ -138,6 +139,8 @@
 		3F0CFEA01631C4C000FAA6DD /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		3F0CFEAD1631C7D600FAA6DD /* SFLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLoadingView.h; sourceTree = "<group>"; };
 		3F0CFEAE1631C7D600FAA6DD /* SFLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoadingView.m; sourceTree = "<group>"; };
+		3F0CFEB01631E2F400FAA6DD /* SFAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAboutViewController.h; sourceTree = "<group>"; };
+		3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAboutViewController.m; sourceTree = "<group>"; };
 		3F2D6FCD161C9A57001E7791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sitegeist iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sitegeist iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -204,6 +207,8 @@
 				3F0CFE181631AEFB00FAA6DD /* SFRadarViewController.m */,
 				3F0CFE191631AEFB00FAA6DD /* SFSitegeistViewController.h */,
 				3F0CFE1A1631AEFB00FAA6DD /* SFSitegeistViewController.m */,
+				3F0CFEB01631E2F400FAA6DD /* SFAboutViewController.h */,
+				3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -515,6 +520,7 @@
 				3F0CFEA81631C4C000FAA6DD /* AFXMLRequestOperation.m in Sources */,
 				3F0CFEA91631C4C000FAA6DD /* UIImageView+AFNetworking.m in Sources */,
 				3F0CFEAF1631C7D600FAA6DD /* SFLoadingView.m in Sources */,
+				3F0CFEB21631E2F400FAA6DD /* SFAboutViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
