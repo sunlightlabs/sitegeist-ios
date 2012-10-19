@@ -13,6 +13,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+
+    [TestFlight takeOff:@"4ad90c59aacf03cd3e58cc7c595ff348_NDI4OTcyMDExLTExLTIzIDAwOjI0OjI1LjcxNTMwOQ"];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor blackColor];
     

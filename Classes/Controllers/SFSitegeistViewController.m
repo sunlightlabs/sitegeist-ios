@@ -6,6 +6,7 @@
 //  Copyright (c) 2012 Sunlight Foundation. All rights reserved.
 //
 
+#import "SFLoadingView.h"
 #import "SFPaneView.h"
 #import "SFLocationViewController.h"
 #import "SFRadarViewController.h"
@@ -14,6 +15,8 @@
 #import <QuartzCore/CAMediaTimingFunction.h>
 
 @interface SFSitegeistViewController ()
+
+@property (nonatomic, retain) SFLoadingView *loadingView;
 
 @end
 
@@ -117,6 +120,9 @@
     
     [self createGestureRecognizer];
     
+    self.loadingView = [[SFLoadingView alloc] initWithFrame:contentFrame];
+    [self.loadingView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.95]];
+    
     [_currentController reloadData];
     
 }
@@ -127,6 +133,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)showLoadingMessage:(NSString *)message
+{
+    [self.loadingView.messageLabel setText:message];
+    [self.parentViewController.view addSubview:self.loadingView];
+}
+
 - (void)locate
 {
     [self presentModalViewController:[[SFLocationViewController alloc] init] animated:YES];
@@ -134,7 +146,8 @@
 
 - (void)about
 {
-    [self presentModalViewController:[[SFRadarViewController alloc] init] animated:YES];
+    [self showLoadingMessage:@"Refreshing data"];
+//    [self presentModalViewController:[[SFRadarViewController alloc] init] animated:YES];
 }
 
 - (void)paginate:(id)sender forEvent:(UIEvent *)event
