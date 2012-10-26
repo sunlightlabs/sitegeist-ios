@@ -14,6 +14,7 @@
 #import "SFSitegeistViewController.h"
 #import <QuartzCore/CAAnimation.h>
 #import <QuartzCore/CAMediaTimingFunction.h>
+#import <QuartzCore/QuartzCore.h>
 #import <Social/Social.h>
 
 @interface SFSitegeistViewController ()
@@ -155,13 +156,13 @@
         SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [composer setInitialText:@"Discover what's around you with Sitegeist from @sunfoundation"];
         [composer addURL:[NSURL URLWithString:@"http://sitegeist.us/shared/?at=lat,lon"]];
-//        [composer addImage:[UIImage imageNamed:@"share.png"]];
+        [composer addImage:[self screenshot]];
         [self presentViewController:composer animated:YES completion:nil];
     } else if ([buttonTitle isEqualToString:@"Facebook"]) {
         SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [composer setInitialText:@"Discover what's around you with Sitegeist from Sunlight Foundation."];
         [composer addURL:[NSURL URLWithString:@"http://sitegeist.us/shared/?at=lat,lon"]];
-//        [composer addImage:[UIImage imageNamed:@"share.png"]];
+        [composer addImage:[self screenshot]];
         [self presentViewController:composer animated:YES completion:nil];
     }
 }
@@ -278,6 +279,15 @@
         NSLog(@"swipe right");
         [self previousPane];
     }
+}
+
+- (UIImage *)screenshot
+{
+    UIGraphicsBeginImageContext(_currentController.view.frame.size);
+    [_currentController.view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *ss = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return ss;
 }
 
 @end
