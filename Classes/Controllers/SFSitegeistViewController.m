@@ -14,10 +14,12 @@
 #import "SFSitegeistViewController.h"
 #import <QuartzCore/CAAnimation.h>
 #import <QuartzCore/CAMediaTimingFunction.h>
+#import <Social/Social.h>
 
 @interface SFSitegeistViewController ()
 
 @property (nonatomic, retain) SFLoadingView *loadingView;
+@property (nonatomic, retain) UIActionSheet *sharingSheet;
 
 @end
 
@@ -54,16 +56,6 @@
     [locationButton setImage:[UIImage imageNamed:@"74-location"] forState:UIControlStateNormal];
     [locationButton addTarget:self action:@selector(showLocationView) forControlEvents:UIControlEventTouchUpInside];
     [locationButton setFrame:CGRectMake(0, 0, 27, 27)];
-    
-//    UIBarButtonItem *sunlightButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"61-sunlight"]
-//                                                                       style:UIBarButtonItemStyleBordered
-//                                                                      target:self
-//                                                                      action:@selector(about)];
-//
-//    UIBarButtonItem *locationButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"74-location"]
-//                                                                       style:UIBarButtonItemStyleBordered
-//                                                                      target:self
-//                                                                      action:@selector(locate)];
 
     self.navigationItem.title = @"Sitegeist";
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:sunlightButton];
@@ -116,6 +108,12 @@
     [_pageControl addTarget:self action:@selector(paginate:forEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.view addSubview:_pageControl];
     
+    UIButton *shareButton = [[UIButton alloc] init];
+    [shareButton setImage:[UIImage imageNamed:@"212-action2"] forState:UIControlStateNormal];
+    [shareButton addTarget:self action:@selector(share) forControlEvents:UIControlEventTouchUpInside];
+    [shareButton setFrame:CGRectMake(10, contentFrame.size.height - 10, 27, 27)];
+    [self.navigationController.view addSubview:shareButton];
+    
     NSLog(@"Current page: %d", _controllerIndex);
     [_pageControl setCurrentPage:_controllerIndex];
     
@@ -123,6 +121,17 @@
     
     self.loadingView = [[SFLoadingView alloc] initWithFrame:contentFrame];
     [self.loadingView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.95]];
+    
+    self.sharingSheet = [[UIActionSheet alloc] initWithTitle:@"Share Sitegeist" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
+    [self.sharingSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter]) {
+        [self.sharingSheet addButtonWithTitle:@"Twitter"];
+    }
+    if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
+        [self.sharingSheet addButtonWithTitle:@"Facebook"];
+    }
+    [self.sharingSheet addButtonWithTitle:@"Cancel"];
+    self.sharingSheet.cancelButtonIndex = self.sharingSheet.numberOfButtons - 1;
     
     [_currentController reloadData];
     
@@ -132,6 +141,29 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)share
+{
+    [self.sharingSheet showInView:self.view];
+}
+
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *buttonTitle = [self.sharingSheet buttonTitleAtIndex:buttonIndex];
+    if ([buttonTitle isEqualToString:@"Twitter"]) {
+        SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+        [composer setInitialText:@"Discover what's around you with Sitegeist from @sunfoundation"];
+        [composer addURL:[NSURL URLWithString:@"http://sitegeist.us/shared/?at=lat,lon"]];
+//        [composer addImage:[UIImage imageNamed:@"share.png"]];
+        [self presentViewController:composer animated:YES completion:nil];
+    } else if ([buttonTitle isEqualToString:@"Facebook"]) {
+        SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        [composer setInitialText:@"Discover what's around you with Sitegeist from Sunlight Foundation."];
+        [composer addURL:[NSURL URLWithString:@"http://sitegeist.us/shared/?at=lat,lon"]];
+//        [composer addImage:[UIImage imageNamed:@"share.png"]];
+        [self presentViewController:composer animated:YES completion:nil];
+    }
 }
 
 - (void)showLoadingMessage:(NSString *)message

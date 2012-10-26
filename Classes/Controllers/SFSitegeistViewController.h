@@ -15,7 +15,7 @@ typedef enum {
     SFPaneDirectionRight
 } SFPaneDirection;
 
-@interface SFSitegeistViewController : UIViewController
+@interface SFSitegeistViewController : UIViewController <UIActionSheetDelegate>
 
 @property (nonatomic, retain) SFRadarViewController *radarController;
 @property (nonatomic, retain) SFPaneViewController *censusController;
@@ -32,5 +32,6 @@ typedef enum {
 @property (nonatomic, assign) BOOL isSliding;
 
 - (void)reloadCurrentPane;
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
 
 @end
