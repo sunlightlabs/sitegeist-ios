@@ -12,6 +12,7 @@
 #import "SFLocationViewController.h"
 #import "SFRadarViewController.h"
 #import "SFSitegeistViewController.h"
+#import <MessageUI/MessageUI.h>
 #import <QuartzCore/CAAnimation.h>
 #import <QuartzCore/CAMediaTimingFunction.h>
 #import <QuartzCore/QuartzCore.h>
@@ -131,6 +132,9 @@
     if ([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]) {
         [self.sharingSheet addButtonWithTitle:@"Facebook"];
     }
+    if ([MFMailComposeViewController canSendMail]) {
+        [self.sharingSheet addButtonWithTitle:@"Email"];
+    }
     [self.sharingSheet addButtonWithTitle:@"Cancel"];
     self.sharingSheet.cancelButtonIndex = self.sharingSheet.numberOfButtons - 1;
     
@@ -152,18 +156,37 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *buttonTitle = [self.sharingSheet buttonTitleAtIndex:buttonIndex];
+ 
+    UIImage *screenshot = [self screenshot];
+    NSString *url = @"http://sitegeist.us/shared/?at=lat,lon";
+    
     if ([buttonTitle isEqualToString:@"Twitter"]) {
+    
         SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
         [composer setInitialText:@"Discover what's around you with Sitegeist from @sunfoundation"];
-        [composer addURL:[NSURL URLWithString:@"http://sitegeist.us/shared/?at=lat,lon"]];
-        [composer addImage:[self screenshot]];
+        [composer addURL:[NSURL URLWithString:url]];
+        [composer addImage:screenshot];
         [self presentViewController:composer animated:YES completion:nil];
+        
     } else if ([buttonTitle isEqualToString:@"Facebook"]) {
+    
         SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
         [composer setInitialText:@"Discover what's around you with Sitegeist from Sunlight Foundation."];
-        [composer addURL:[NSURL URLWithString:@"http://sitegeist.us/shared/?at=lat,lon"]];
-        [composer addImage:[self screenshot]];
+        [composer addURL:[NSURL URLWithString:url]];
+        [composer addImage:screenshot];
         [self presentViewController:composer animated:YES completion:nil];
+        
+    } else if ([buttonTitle isEqualToString:@"Email"]) {
+    
+        NSString *body = @"http://sitegeist.us/shared/?at=lat,lon";
+    
+        MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
+        mailer.mailComposeDelegate = self;
+        [mailer setSubject:@"Discover what's around you with Sitegeist"];
+        [mailer addAttachmentData:UIImageJPEGRepresentation(screenshot, 0.8f) mimeType:@"image/jpeg" fileName:@"sitegeist"];
+        [mailer setMessageBody:body isHTML:NO];
+        [self presentViewController:mailer animated:YES completion:nil];
+        
     }
 }
 
@@ -175,12 +198,12 @@
 
 - (void)showLocationView
 {
-    [self presentModalViewController:[[SFLocationViewController alloc] init] animated:YES];
+    [self presentViewController:[[SFLocationViewController alloc] init] animated:YES completion:nil];
 }
 
 - (void)showAboutView
 {
-    [self presentModalViewController:[[SFAboutViewController alloc] init] animated:YES];
+    [self presentViewController:[[SFAboutViewController alloc] init] animated:YES completion:nil];
 }
 
 - (void)paginate:(id)sender forEvent:(UIEvent *)event
@@ -279,6 +302,11 @@
         NSLog(@"swipe right");
         [self previousPane];
     }
+}
+
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (UIImage *)screenshot

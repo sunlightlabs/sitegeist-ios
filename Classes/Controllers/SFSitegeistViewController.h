@@ -9,13 +9,14 @@
 #import "SFPaneViewController.h"
 #import "SFRadarViewController.h"
 #import <UIKit/UIKit.h>
+#import <MessageUI/MessageUI.h>
 
 typedef enum {
     SFPaneDirectionLeft,
     SFPaneDirectionRight
 } SFPaneDirection;
 
-@interface SFSitegeistViewController : UIViewController <UIActionSheetDelegate>
+@interface SFSitegeistViewController : UIViewController <UIActionSheetDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, retain) SFRadarViewController *radarController;
 @property (nonatomic, retain) SFPaneViewController *censusController;
@@ -33,5 +34,6 @@ typedef enum {
 
 - (void)reloadCurrentPane;
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
+- (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
 
 @end
