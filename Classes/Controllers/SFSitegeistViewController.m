@@ -22,6 +22,7 @@
 
 @property (nonatomic, retain) SFLoadingView *loadingView;
 @property (nonatomic, retain) UIActionSheet *sharingSheet;
+@property (nonatomic, retain) Reachability *internetReachable;
 
 @end
 
@@ -40,6 +41,18 @@
 
 @synthesize controllerIndex = _controllerIndex;
 @synthesize isSliding = _isSliding;
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(checkNetworkStatus)
+                                                 name:kReachabilityChangedNotification
+                                               object:nil];
+    self.internetReachable = [Reachability reachabilityForInternetConnection];
+    [self.internetReachable startNotifier];
+}
 
 - (void)viewDidLoad
 {
@@ -316,6 +329,17 @@
     UIImage *ss = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return ss;
+}
+
+- (void)checkNetworkStatus:(NSNotification *)notice
+{
+    NetworkStatus status = [self.internetReachable currentReachabilityStatus];
+    if (status == NotReachable) {
+        SFAboutViewController *about = [[SFAboutViewController alloc] init];
+        [self presentViewController:about animated:YES completion:nil];
+    } else {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }
 }
 
 @end
