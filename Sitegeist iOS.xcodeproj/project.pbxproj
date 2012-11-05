@@ -51,6 +51,7 @@
 		3F0CFEAC1631C4C000FAA6DD /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE9F1631C4C000FAA6DD /* release_notes.md */; };
 		3F0CFEAF1631C7D600FAA6DD /* SFLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFEAE1631C7D600FAA6DD /* SFLoadingView.m */; };
 		3F0CFEB21631E2F400FAA6DD /* SFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */; };
+		3F0E8BEF16486441008030A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */; };
 		3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D6FCD161C9A57001E7791 /* MapKit.framework */; };
 		3F7B6DE11641D30900E05471 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7B6DE01641D30900E05471 /* MessageUI.framework */; };
 		3F9D7D7E1639E3E4001793C4 /* 212-action2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D7D7C1639E3E4001793C4 /* 212-action2.png */; };
@@ -145,6 +146,7 @@
 		3F0CFEAE1631C7D600FAA6DD /* SFLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLoadingView.m; sourceTree = "<group>"; };
 		3F0CFEB01631E2F400FAA6DD /* SFAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFAboutViewController.h; sourceTree = "<group>"; };
 		3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAboutViewController.m; sourceTree = "<group>"; };
+		3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3F2D6FCD161C9A57001E7791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F7B6DE01641D30900E05471 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3F9D7D7C1639E3E4001793C4 /* 212-action2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "212-action2.png"; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0E8BEF16486441008030A9 /* SystemConfiguration.framework in Frameworks */,
 				3F7B6DE11641D30900E05471 /* MessageUI.framework in Frameworks */,
 				3F9D7D821639EACA001793C4 /* Social.framework in Frameworks */,
 				3F0CFE691631B3F900FAA6DD /* libz.dylib in Frameworks */,
@@ -340,6 +343,7 @@
 		3FD00CD316133E6B0096596F = {
 			isa = PBXGroup;
 			children = (
+				3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */,
 				3F7B6DE01641D30900E05471 /* MessageUI.framework */,
 				3F0CFE111631AEFB00FAA6DD /* Classes */,
 				3F0CFE5C1631B2B200FAA6DD /* Other Sources */,

@@ -12,6 +12,7 @@
 #import "SFLocationViewController.h"
 #import "SFRadarViewController.h"
 #import "SFSitegeistViewController.h"
+#import "AFNetworking.h"
 #import <MessageUI/MessageUI.h>
 #import <QuartzCore/CAAnimation.h>
 #import <QuartzCore/CAMediaTimingFunction.h>
@@ -22,7 +23,6 @@
 
 @property (nonatomic, retain) SFLoadingView *loadingView;
 @property (nonatomic, retain) UIActionSheet *sharingSheet;
-@property (nonatomic, retain) Reachability *internetReachable;
 
 @end
 
@@ -45,13 +45,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(checkNetworkStatus)
-                                                 name:kReachabilityChangedNotification
-                                               object:nil];
-    self.internetReachable = [Reachability reachabilityForInternetConnection];
-    [self.internetReachable startNotifier];
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] init];
+    [httpClient setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
+        if (status == AFNetworkReachabilityStatusNotReachable) {
+            SFAboutViewController *popup = [[SFAboutViewController alloc] init];
+            [self presentViewController:popup animated:YES completion:nil];
+        } else {
+            
+        }
+    }];
 }
 
 - (void)viewDidLoad
@@ -59,7 +61,7 @@
 
     [super viewDidLoad];
     
-    _controllerIndex = 1;
+    _controllerIndex = 0;
     _isSliding = NO;
     
     UIButton *sunlightButton = [[UIButton alloc] init];
@@ -78,37 +80,36 @@
     
     CGRect contentFrame = self.view.frame;
     
-    _radarController = [[SFRadarViewController alloc] init];
-    [_radarController.view setFrame:contentFrame];
+//    _radarController = [[SFRadarViewController alloc] init];
+//    [_radarController.view setFrame:contentFrame];
+//    [self addChildViewController:_radarController];
 
     _censusController = [[SFPaneViewController alloc] init];
     [_censusController.view setFrame:contentFrame];
     [_censusController loadURL:@"http://sitegeist.s3.amazonaws.com/census.html"];
     [_censusController fakeIt:@"people.jpg"];
+    [self addChildViewController:_censusController];
     
     _housingController = [[SFPaneViewController alloc] init];
     [_housingController.view setFrame:contentFrame];
     [_housingController fakeIt:@"housing.jpg"];
+    [self addChildViewController:_housingController];
     
     _cultureController = [[SFPaneViewController alloc] init];
     [_cultureController.view setFrame:contentFrame];
     [_cultureController loadURL:@"http://sitegeist.s3.amazonaws.com/culture.html"];
     [_cultureController fakeIt:@"fun.jpg"];
+    [self addChildViewController:_cultureController];
     
     _environmentController = [[SFPaneViewController alloc] init];
     [_environmentController.view setFrame:contentFrame];
     [_environmentController loadURL:@"http://sitegeist.s3.amazonaws.com/environment.html"];
     [_environmentController fakeIt:@"environment.jpg"];
+    [self addChildViewController:_environmentController];
     
     _historyController = [[SFPaneViewController alloc] init];
     [_historyController.view setFrame:contentFrame];
     [_historyController fakeIt:@"history.jpg"];
-
-    [self addChildViewController:_radarController];
-    [self addChildViewController:_censusController];
-    [self addChildViewController:_housingController];
-    [self addChildViewController:_cultureController];
-    [self addChildViewController:_environmentController];
     [self addChildViewController:_historyController];
     
     _currentController = [self.childViewControllers objectAtIndex:_controllerIndex];
@@ -329,17 +330,6 @@
     UIImage *ss = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return ss;
-}
-
-- (void)checkNetworkStatus:(NSNotification *)notice
-{
-    NetworkStatus status = [self.internetReachable currentReachabilityStatus];
-    if (status == NotReachable) {
-        SFAboutViewController *about = [[SFAboutViewController alloc] init];
-        [self presentViewController:about animated:YES completion:nil];
-    } else {
-        [self dismissViewControllerAnimated:YES completion:nil];
-    }
 }
 
 @end
