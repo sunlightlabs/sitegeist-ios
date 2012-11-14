@@ -86,30 +86,32 @@
 
     _censusController = [[SFPaneViewController alloc] init];
     [_censusController.view setFrame:contentFrame];
-    [_censusController loadURL:@"http://sitegeist.s3.amazonaws.com/census.html"];
-    [_censusController fakeIt:@"people.jpg"];
+    [_censusController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/people/"];
+//    [_censusController fakeIt:@"people.jpg"];
     [self addChildViewController:_censusController];
     
     _housingController = [[SFPaneViewController alloc] init];
     [_housingController.view setFrame:contentFrame];
-    [_housingController fakeIt:@"housing.jpg"];
+    [_housingController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/housing/"];
+//    [_housingController fakeIt:@"housing.jpg"];
     [self addChildViewController:_housingController];
     
     _cultureController = [[SFPaneViewController alloc] init];
     [_cultureController.view setFrame:contentFrame];
-    [_cultureController loadURL:@"http://sitegeist.s3.amazonaws.com/culture.html"];
-    [_cultureController fakeIt:@"fun.jpg"];
+    [_cultureController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/fun/"];
+//    [_cultureController fakeIt:@"fun.jpg"];
     [self addChildViewController:_cultureController];
     
     _environmentController = [[SFPaneViewController alloc] init];
     [_environmentController.view setFrame:contentFrame];
-    [_environmentController loadURL:@"http://sitegeist.s3.amazonaws.com/environment.html"];
-    [_environmentController fakeIt:@"environment.jpg"];
+    [_environmentController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/environment/"];
+//    [_environmentController fakeIt:@"environment.jpg"];
     [self addChildViewController:_environmentController];
     
     _historyController = [[SFPaneViewController alloc] init];
     [_historyController.view setFrame:contentFrame];
-    [_historyController fakeIt:@"history.jpg"];
+    [_historyController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/history/"];
+//    [_historyController fakeIt:@"history.jpg"];
     [self addChildViewController:_historyController];
     
     _currentController = [self.childViewControllers objectAtIndex:_controllerIndex];
