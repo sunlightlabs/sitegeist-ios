@@ -80,38 +80,41 @@
     
     CGRect contentFrame = self.view.frame;
     
+    /*
+     * radar controller
+     */
+    
 //    _radarController = [[SFRadarViewController alloc] init];
 //    [_radarController.view setFrame:contentFrame];
 //    [self addChildViewController:_radarController];
 
+    /*
+     * create pane controllers
+     */
+
     _censusController = [[SFPaneViewController alloc] init];
     [_censusController.view setFrame:contentFrame];
-    [_censusController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/people/"];
-//    [_censusController fakeIt:@"people.jpg"];
+    [_censusController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/people/?highres=1"];
     [self addChildViewController:_censusController];
     
     _housingController = [[SFPaneViewController alloc] init];
     [_housingController.view setFrame:contentFrame];
-    [_housingController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/housing/"];
-//    [_housingController fakeIt:@"housing.jpg"];
+    [_housingController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/housing/?highres=1"];
     [self addChildViewController:_housingController];
     
     _cultureController = [[SFPaneViewController alloc] init];
     [_cultureController.view setFrame:contentFrame];
-    [_cultureController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/fun/"];
-//    [_cultureController fakeIt:@"fun.jpg"];
+    [_cultureController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/fun/?highres=1"];
     [self addChildViewController:_cultureController];
     
     _environmentController = [[SFPaneViewController alloc] init];
     [_environmentController.view setFrame:contentFrame];
-    [_environmentController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/environment/"];
-//    [_environmentController fakeIt:@"environment.jpg"];
+    [_environmentController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/environment/?highres=1"];
     [self addChildViewController:_environmentController];
     
     _historyController = [[SFPaneViewController alloc] init];
     [_historyController.view setFrame:contentFrame];
-    [_historyController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com:8080/api/history/"];
-//    [_historyController fakeIt:@"history.jpg"];
+    [_historyController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/history/?highres=1"];
     [self addChildViewController:_historyController];
     
     _currentController = [self.childViewControllers objectAtIndex:_controllerIndex];
@@ -120,25 +123,27 @@
     [self.view addSubview:_currentController.view];
     [_currentController didMoveToParentViewController:self];
     
+    /*
+     * page indicator control
+     */
+    
     _pageControl = [[UIPageControl alloc] init];
     [_pageControl setFrame:CGRectMake(0.0, contentFrame.size.height, self.view.frame.size.width, 20.0)];
     [_pageControl setNumberOfPages:[self.childViewControllers count]];
     [_pageControl addTarget:self action:@selector(paginate:forEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.view addSubview:_pageControl];
     
+    [_pageControl setCurrentPage:_controllerIndex];
+    
+    /*
+     * share button and sharing sheet
+     */
+    
     UIButton *shareButton = [[UIButton alloc] init];
     [shareButton setImage:[UIImage imageNamed:@"212-action2"] forState:UIControlStateNormal];
     [shareButton addTarget:self action:@selector(share) forControlEvents:UIControlEventTouchUpInside];
     [shareButton setFrame:CGRectMake(10, contentFrame.size.height - 10, 27, 27)];
     [self.navigationController.view addSubview:shareButton];
-    
-    NSLog(@"Current page: %d", _controllerIndex);
-    [_pageControl setCurrentPage:_controllerIndex];
-    
-    [self createGestureRecognizer];
-    
-    self.loadingView = [[SFLoadingView alloc] initWithFrame:contentFrame];
-    [self.loadingView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.95]];
     
     self.sharingSheet = [[UIActionSheet alloc] initWithTitle:@"Share Sitegeist" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
     [self.sharingSheet setActionSheetStyle:UIActionSheetStyleBlackTranslucent];
@@ -153,6 +158,12 @@
     }
     [self.sharingSheet addButtonWithTitle:@"Cancel"];
     self.sharingSheet.cancelButtonIndex = self.sharingSheet.numberOfButtons - 1;
+    
+    
+    [self createGestureRecognizer];
+    
+    self.loadingView = [[SFLoadingView alloc] initWithFrame:contentFrame];
+    [self.loadingView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.95]];
     
     [_currentController reloadData];
     
