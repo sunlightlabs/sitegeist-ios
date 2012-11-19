@@ -21,8 +21,8 @@
     
     [self applyStylesheet];
     
-    UIViewController *viewController = [[SFSitegeistViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.mainController = [[SFSitegeistViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:self.mainController];
     self.window.rootViewController = navigationController;
     
     [self.window makeKeyAndVisible];
@@ -49,7 +49,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [self.mainController reloadAllPanes];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

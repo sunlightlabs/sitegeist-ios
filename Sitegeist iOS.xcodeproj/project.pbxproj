@@ -55,6 +55,8 @@
 		3F0CFEB21631E2F400FAA6DD /* SFAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */; };
 		3F0E8BEF16486441008030A9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */; };
 		3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D6FCD161C9A57001E7791 /* MapKit.framework */; };
+		3F5A07BD165AC98D0097AB45 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A07BB165AC98D0097AB45 /* 01-refresh.png */; };
+		3F5A07BE165AC98D0097AB45 /* 01-refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */; };
 		3F7B6DE11641D30900E05471 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7B6DE01641D30900E05471 /* MessageUI.framework */; };
 		3F9D7D7E1639E3E4001793C4 /* 212-action2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D7D7C1639E3E4001793C4 /* 212-action2.png */; };
 		3F9D7D7F1639E3E4001793C4 /* 212-action2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D7D7D1639E3E4001793C4 /* 212-action2@2x.png */; };
@@ -152,6 +154,8 @@
 		3F0CFEB11631E2F400FAA6DD /* SFAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFAboutViewController.m; sourceTree = "<group>"; };
 		3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		3F2D6FCD161C9A57001E7791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3F5A07BB165AC98D0097AB45 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
+		3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh@2x.png"; sourceTree = "<group>"; };
 		3F7B6DE01641D30900E05471 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3F9D7D7C1639E3E4001793C4 /* 212-action2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "212-action2.png"; sourceTree = "<group>"; };
 		3F9D7D7D1639E3E4001793C4 /* 212-action2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "212-action2@2x.png"; sourceTree = "<group>"; };
@@ -259,6 +263,8 @@
 		3F0CFE341631AF0100FAA6DD /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3F5A07BB165AC98D0097AB45 /* 01-refresh.png */,
+				3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */,
 				3F9D7D7C1639E3E4001793C4 /* 212-action2.png */,
 				3F9D7D7D1639E3E4001793C4 /* 212-action2@2x.png */,
 				3F0CFE351631AF0100FAA6DD /* 61-sunlight.png */,
@@ -494,6 +500,8 @@
 				3F9D7D7F1639E3E4001793C4 /* 212-action2@2x.png in Resources */,
 				3F0185B81656F33900542BF5 /* Icon.png in Resources */,
 				3F0185BA1656F33E00542BF5 /* Icon@2x.png in Resources */,
+				3F5A07BD165AC98D0097AB45 /* 01-refresh.png in Resources */,
+				3F5A07BE165AC98D0097AB45 /* 01-refresh@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

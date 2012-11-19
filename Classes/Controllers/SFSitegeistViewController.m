@@ -23,6 +23,7 @@
 
 @property (nonatomic, retain) SFLoadingView *loadingView;
 @property (nonatomic, retain) UIActionSheet *sharingSheet;
+@property (nonatomic, retain) NSUserDefaults *defaults;
 
 @end
 
@@ -61,6 +62,9 @@
 
     [super viewDidLoad];
     
+    NSString *appDomain = [[NSBundle mainBundle] bundleIdentifier];
+    [[NSUserDefaults standardUserDefaults] removePersistentDomainForName:appDomain];
+    
     _controllerIndex = 0;
     _isSliding = NO;
     
@@ -94,27 +98,27 @@
 
     _censusController = [[SFPaneViewController alloc] init];
     [_censusController.view setFrame:contentFrame];
-    [_censusController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/people/?highres=1"];
+    [_censusController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/people/"];
     [self addChildViewController:_censusController];
     
     _housingController = [[SFPaneViewController alloc] init];
     [_housingController.view setFrame:contentFrame];
-    [_housingController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/housing/?highres=1"];
+    [_housingController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/housing/"];
     [self addChildViewController:_housingController];
     
     _cultureController = [[SFPaneViewController alloc] init];
     [_cultureController.view setFrame:contentFrame];
-    [_cultureController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/fun/?highres=1"];
+    [_cultureController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/fun/"];
     [self addChildViewController:_cultureController];
     
     _environmentController = [[SFPaneViewController alloc] init];
     [_environmentController.view setFrame:contentFrame];
-    [_environmentController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/environment/?highres=1"];
+    [_environmentController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/environment/"];
     [self addChildViewController:_environmentController];
     
     _historyController = [[SFPaneViewController alloc] init];
     [_historyController.view setFrame:contentFrame];
-    [_historyController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/history/?highres=1"];
+    [_historyController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/history/"];
     [self addChildViewController:_historyController];
     
     _currentController = [self.childViewControllers objectAtIndex:_controllerIndex];
@@ -134,6 +138,16 @@
     [self.navigationController.view addSubview:_pageControl];
     
     [_pageControl setCurrentPage:_controllerIndex];
+    
+    /*
+     * refresh button
+     */
+    
+    UIButton *refreshButton = [[UIButton alloc] init];
+    [refreshButton setImage:[UIImage imageNamed:@"01-refresh"] forState:UIControlStateNormal];
+    [refreshButton addTarget:self action:@selector(reloadAllPanes) forControlEvents:UIControlEventTouchUpInside];
+    [refreshButton setFrame:CGRectMake(276, contentFrame.size.height - 10, 27, 27)];
+    [self.navigationController.view addSubview:refreshButton];
     
     /*
      * share button and sharing sheet
@@ -166,6 +180,14 @@
     [self.loadingView setBackgroundColor:[UIColor colorWithRed:0.2 green:0.2 blue:0.2 alpha:0.95]];
     
     [_currentController reloadData];
+    
+    self.defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *cll = [self.defaults arrayForKey:@"cll"];
+    NSLog(@"Initial CLL: %@", cll);
+    if (!cll) {
+        [self showLocationView];
+    }
     
 }
 
@@ -245,7 +267,18 @@
 
 - (void)reloadCurrentPane
 {
-    [self showLoadingMessage:@"Refreshing data"];
+    [_currentController reloadPane];
+//    [self showLoadingMessage:@"Refreshing data"];
+}
+
+- (void)reloadAllPanes
+{
+    [_censusController reloadPane];
+    [_housingController reloadPane];
+    [_cultureController reloadPane];
+    [_environmentController reloadPane];
+    [_historyController reloadPane];
+//    [self showLoadingMessage:@"Refreshing data"];
 }
 
 - (void)nextPane

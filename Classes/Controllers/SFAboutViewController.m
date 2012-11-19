@@ -55,7 +55,7 @@
 
 - (void)closeAbout
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

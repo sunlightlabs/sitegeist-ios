@@ -65,11 +65,30 @@
 - (void)loadURL:(NSString *)urlString
 {
     [_paneView fadeOut];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    
+    NSArray *cll = [userDefaults arrayForKey:@"cll"];
+    if (!cll) {
+        // default to the Sunlight office
+        cll = [[NSArray alloc] initWithObjects:[NSNumber numberWithFloat:38.906956], [NSNumber numberWithFloat:-77.042883], nil];
+    }
+    
+    urlString = [urlString stringByAppendingString:@"?"];
+    urlString = [urlString stringByAppendingFormat:@"cll=%@,%@&", cll[0], cll[1]];
+    urlString = [urlString stringByAppendingString:@"highres=1&"];
+    
+    NSLog(@"Loading URL: %@", urlString);
+    
     NSURL *url = [NSURL URLWithString:urlString];
+    
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_paneView loadRequest:request];
     [_paneView updateConstraints];
     _paneView.hasLoadedPage = YES;
+    
+    [_paneView fadeIn];
+    
 }
 
 - (void)reloadData
@@ -82,11 +101,12 @@
 
 - (void)reloadPane
 {
-    [_paneView reload];
+    [self loadURL:_endpoint];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    
     [_paneView fadeIn];
 }
 

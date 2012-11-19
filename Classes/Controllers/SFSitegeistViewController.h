@@ -32,6 +32,7 @@ typedef enum {
 @property (nonatomic, assign) int controllerIndex;
 @property (nonatomic, assign) BOOL isSliding;
 
+- (void)reloadAllPanes;
 - (void)reloadCurrentPane;
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
