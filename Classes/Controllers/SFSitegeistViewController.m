@@ -95,30 +95,32 @@
     /*
      * create pane controllers
      */
+    
+    NSString *host = @"sitegeist.sunlightfoundation.com";
 
     _censusController = [[SFPaneViewController alloc] init];
     [_censusController.view setFrame:contentFrame];
-    [_censusController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/people/"];
+    [_censusController setEndpointAndLoad:[NSString stringWithFormat:@"http://%@/api/people/", host]];
     [self addChildViewController:_censusController];
     
     _housingController = [[SFPaneViewController alloc] init];
     [_housingController.view setFrame:contentFrame];
-    [_housingController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/housing/"];
+    [_housingController setEndpointAndLoad:[NSString stringWithFormat:@"http://%@/api/housing/", host]];
     [self addChildViewController:_housingController];
     
     _cultureController = [[SFPaneViewController alloc] init];
     [_cultureController.view setFrame:contentFrame];
-    [_cultureController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/fun/"];
+    [_cultureController setEndpointAndLoad:[NSString stringWithFormat:@"http://%@/api/fun/", host]];
     [self addChildViewController:_cultureController];
     
     _environmentController = [[SFPaneViewController alloc] init];
     [_environmentController.view setFrame:contentFrame];
-    [_environmentController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/environment/"];
+    [_environmentController setEndpointAndLoad:[NSString stringWithFormat:@"http://%@/api/environment/", host]];
     [self addChildViewController:_environmentController];
     
     _historyController = [[SFPaneViewController alloc] init];
     [_historyController.view setFrame:contentFrame];
-    [_historyController loadURL:@"http://ec2-23-22-182-132.compute-1.amazonaws.com/api/history/"];
+    [_historyController setEndpointAndLoad:[NSString stringWithFormat:@"http://%@/api/history/", host]];
     [self addChildViewController:_historyController];
     
     _currentController = [self.childViewControllers objectAtIndex:_controllerIndex];
@@ -145,7 +147,7 @@
     
     UIButton *refreshButton = [[UIButton alloc] init];
     [refreshButton setImage:[UIImage imageNamed:@"01-refresh"] forState:UIControlStateNormal];
-    [refreshButton addTarget:self action:@selector(reloadAllPanes) forControlEvents:UIControlEventTouchUpInside];
+    [refreshButton addTarget:self action:@selector(reloadCurrentPane) forControlEvents:UIControlEventTouchUpInside];
     [refreshButton setFrame:CGRectMake(276, contentFrame.size.height - 10, 27, 27)];
     [self.navigationController.view addSubview:refreshButton];
     

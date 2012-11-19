@@ -12,10 +12,8 @@
 @interface SFPaneViewController : UIViewController <UIWebViewDelegate>
 
 @property (nonatomic, strong, readonly) SFPaneView *paneView;
-@property (nonatomic, assign) NSString *endpoint;
 @property (nonatomic, assign) UIColor *backgroundColor;
 
-- (void)setEndpoint:(NSString *)urlString;
 - (void)setEndpointAndLoad:(NSString *)urlString;
 
 - (void)loadURL:(NSString *)urlString;

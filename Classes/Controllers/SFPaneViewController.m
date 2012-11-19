@@ -11,12 +11,13 @@
 
 @interface SFPaneViewController ()
 
+@property (nonatomic, retain) NSString* urlEndpoint;
+
 @end
 
 @implementation SFPaneViewController
 
 @synthesize backgroundColor = _backgroundColor;
-@synthesize endpoint = _endpoint;
 @synthesize paneView = _paneView;
 
 - (void)viewDidLoad
@@ -38,7 +39,6 @@
 - (void)fakeIt:(NSString *)mock
 {
 
-    
     UIImage *img = [UIImage imageNamed:mock];
     UIImageView *mockView = [[UIImageView alloc] initWithImage:img];
     UIScrollView *scrollView = [[UIScrollView alloc] init];
@@ -51,20 +51,18 @@
     
 }
 
-- (void)setEndpoint:(NSString *)urlString
-{
-    _endpoint = urlString;
-}
-
 - (void)setEndpointAndLoad:(NSString *)urlString
 {
-    [self setEndpoint:urlString];
+    NSLog(@"Set endpoint: %@", urlString);
+    self.urlEndpoint = urlString;
     [self loadURL:urlString];
 }
 
 - (void)loadURL:(NSString *)urlString
 {
     [_paneView fadeOut];
+    
+    NSLog(@"Loading endpoint: %@", urlString);
     
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     
@@ -74,20 +72,17 @@
         cll = [[NSArray alloc] initWithObjects:[NSNumber numberWithFloat:38.906956], [NSNumber numberWithFloat:-77.042883], nil];
     }
     
-    urlString = [urlString stringByAppendingString:@"?"];
-    urlString = [urlString stringByAppendingFormat:@"cll=%@,%@&", cll[0], cll[1]];
-    urlString = [urlString stringByAppendingString:@"highres=1&"];
+    NSString *builder = [urlString stringByAppendingString:@"?"];
+    builder = [builder stringByAppendingFormat:@"cll=%@,%@&", cll[0], cll[1]];
+    builder = [builder stringByAppendingString:@"highres=1&"];
     
-    NSLog(@"Loading URL: %@", urlString);
+    NSLog(@"Loading URL: %@", builder);
     
-    NSURL *url = [NSURL URLWithString:urlString];
-    
+    NSURL *url = [NSURL URLWithString:builder];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [_paneView loadRequest:request];
     [_paneView updateConstraints];
     _paneView.hasLoadedPage = YES;
-    
-    [_paneView fadeIn];
     
 }
 
@@ -101,12 +96,13 @@
 
 - (void)reloadPane
 {
-    [self loadURL:_endpoint];
+    NSLog(@"Reloading endpoint: %@", self.urlEndpoint);
+    [self loadURL:self.urlEndpoint];
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    
+    NSLog(@"Web view did finish loading");
     [_paneView fadeIn];
 }
 
