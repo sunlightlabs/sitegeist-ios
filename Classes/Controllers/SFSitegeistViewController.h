@@ -34,6 +34,7 @@ typedef enum {
 
 - (void)reloadAllPanes;
 - (void)reloadCurrentPane;
+- (void)reloadCurrentThenOtherPanes;
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;
 - (void)mailComposeController:(MFMailComposeViewController*)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError*)error;
 

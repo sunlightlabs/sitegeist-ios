@@ -147,7 +147,7 @@
     
     UIButton *refreshButton = [[UIButton alloc] init];
     [refreshButton setImage:[UIImage imageNamed:@"01-refresh"] forState:UIControlStateNormal];
-    [refreshButton addTarget:self action:@selector(reloadCurrentPane) forControlEvents:UIControlEventTouchUpInside];
+    [refreshButton addTarget:self action:@selector(reloadAllPanes) forControlEvents:UIControlEventTouchUpInside];
     [refreshButton setFrame:CGRectMake(276, contentFrame.size.height - 10, 27, 27)];
     [self.navigationController.view addSubview:refreshButton];
     
@@ -174,7 +174,6 @@
     }
     [self.sharingSheet addButtonWithTitle:@"Cancel"];
     self.sharingSheet.cancelButtonIndex = self.sharingSheet.numberOfButtons - 1;
-    
     
     [self createGestureRecognizer];
     
@@ -249,7 +248,8 @@
 
 - (void)showLocationView
 {
-    [self presentViewController:[[SFLocationViewController alloc] init] animated:YES completion:nil];
+    SFLocationViewController *locController = [[SFLocationViewController alloc] init];
+    [self presentViewController:locController animated:YES completion:nil];
 }
 
 - (void)showAboutView
@@ -270,7 +270,18 @@
 - (void)reloadCurrentPane
 {
     [_currentController reloadPane];
-//    [self showLoadingMessage:@"Refreshing data"];
+}
+
+- (void)reloadCurrentThenOtherPanes
+{
+    [self reloadCurrentPane];
+    for (id paneController in self.childViewControllers) {
+        if ([paneController class] == [SFSitegeistViewController class]) {
+            if (paneController != _currentController) {
+                [paneController reloadPane];
+            }
+        }
+    }
 }
 
 - (void)reloadAllPanes
@@ -280,7 +291,6 @@
     [_cultureController reloadPane];
     [_environmentController reloadPane];
     [_historyController reloadPane];
-//    [self showLoadingMessage:@"Refreshing data"];
 }
 
 - (void)nextPane

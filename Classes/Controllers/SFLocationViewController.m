@@ -14,7 +14,7 @@
 
 @interface SFLocationViewController ()
 
-@property BOOL locationSelected;
+@property BOOL mapMoved;
 
 @end
 
@@ -32,7 +32,7 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         
-        self.locationSelected = NO;
+        self.mapMoved = NO;
         
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSArray *cll = [userDefaults objectForKey:@"cll"];
@@ -93,6 +93,7 @@
         [_mapView setDelegate:self];
         [_mapView addGestureRecognizer:gr];
         [_mapView setShowsUserLocation:YES];
+        
         [self.view addSubview:_mapView];
         
         if (_mapPin == nil) {
@@ -149,8 +150,9 @@
                                               otherButtonTitles:nil];
         [alert show];
     } else {
+        SFSitegeistViewController *mainController = self.presentingViewController.childViewControllers[0];
         [self dismissViewControllerAnimated:YES completion:^(){
-            [((SFSitegeistViewController *)[self parentViewController]) reloadAllPanes];
+            [mainController reloadCurrentThenOtherPanes];
         }];
     }
 
@@ -158,7 +160,7 @@
 
 - (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
 {
-    if (!self.locationSelected) {
+    if (!self.mapMoved) {
         MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000.0, 2000.0);
         [mapView setRegion:region animated:TRUE];
         [_mapPin setCoordinate:userLocation.coordinate];
@@ -170,7 +172,7 @@
     if (gestureRecognizer.state != UIGestureRecognizerStateBegan)
         return;
     
-    self.locationSelected = YES;
+    self.mapMoved = YES;
 
     CGPoint touchPoint = [gestureRecognizer locationInView:_mapView];
     CLLocationCoordinate2D coord = [_mapView convertPoint:touchPoint toCoordinateFromView:_mapView];
