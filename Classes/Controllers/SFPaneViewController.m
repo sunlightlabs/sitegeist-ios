@@ -9,7 +9,7 @@
 #import "SFPaneView.h"
 #import "SFPaneViewController.h"
 
-@interface SFPaneViewController ()
+@interface SFPaneViewController () <UIWebViewDelegate>
 
 @property (nonatomic, retain) NSString* urlEndpoint;
 
@@ -100,10 +100,23 @@
     [self loadURL:self.urlEndpoint];
 }
 
+
+/*
+ * UIWebViewDelegate methods
+ */
+
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     NSLog(@"Web view did finish loading");
     [_paneView fadeIn];
+}
+
+- (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {
+    if (inType == UIWebViewNavigationTypeLinkClicked) {
+        [[UIApplication sharedApplication] openURL:[inRequest URL]];
+        return NO;
+    }
+    return YES;
 }
 
 @end

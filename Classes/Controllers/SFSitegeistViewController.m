@@ -276,8 +276,9 @@
 {
     [self reloadCurrentPane];
     for (id paneController in self.childViewControllers) {
-        if ([paneController class] == [SFSitegeistViewController class]) {
+        if ([paneController class] == [SFPaneViewController class]) {
             if (paneController != _currentController) {
+                NSLog(@"Reloading other pane: %@", paneController);
                 [paneController reloadPane];
             }
         }
