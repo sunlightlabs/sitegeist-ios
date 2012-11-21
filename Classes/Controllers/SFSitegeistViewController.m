@@ -24,6 +24,7 @@
 @property (nonatomic, retain) SFLoadingView *loadingView;
 @property (nonatomic, retain) UIActionSheet *sharingSheet;
 @property (nonatomic, retain) NSUserDefaults *defaults;
+@property (nonatomic, retain) NSArray *paneSlugs;
 
 @end
 
@@ -69,7 +70,7 @@
     _isSliding = NO;
     
     UIButton *sunlightButton = [[UIButton alloc] init];
-    [sunlightButton setImage:[UIImage imageNamed:@"61-sunlight"] forState:UIControlStateNormal];
+    [sunlightButton setImage:[UIImage imageNamed:@"42-info"] forState:UIControlStateNormal];
     [sunlightButton addTarget:self action:@selector(showAboutView) forControlEvents:UIControlEventTouchUpInside];
     [sunlightButton setFrame:CGRectMake(0, 0, 27, 27)];
     
@@ -97,6 +98,7 @@
      */
     
     NSString *host = @"sitegeist.sunlightfoundation.com";
+    self.paneSlugs = [NSArray arrayWithObjects:@"people", @"housing", @"fun", @"environment", @"history", nil];
 
     _censusController = [[SFPaneViewController alloc] init];
     [_censusController.view setFrame:contentFrame];
@@ -206,9 +208,13 @@
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *buttonTitle = [self.sharingSheet buttonTitleAtIndex:buttonIndex];
+    
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    NSArray *cll = [userDefaults arrayForKey:@"cll"];
  
     UIImage *screenshot = [self screenshot];
-    NSString *url = @"http://sitegeist.us/shared/?at=lat,lon";
+    NSString *url = [NSString stringWithFormat:@"http://sitegeist.sunlightfoundation.com/share/?cll=%@,%@&p=%@",
+                        cll[0], cll[1], [self.paneSlugs objectAtIndex:_controllerIndex]];
     
     if ([buttonTitle isEqualToString:@"Twitter"]) {
     
@@ -228,7 +234,7 @@
         
     } else if ([buttonTitle isEqualToString:@"Email"]) {
     
-        NSString *body = @"http://sitegeist.us/shared/?at=lat,lon";
+        NSString *body = url;
     
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
