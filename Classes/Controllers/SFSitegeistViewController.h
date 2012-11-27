@@ -32,7 +32,6 @@ typedef enum {
 @property (nonatomic, assign) int controllerIndex;
 @property (nonatomic, assign) BOOL isSliding;
 
-- (void)reloadAllPanes;
 - (void)reloadCurrentPane;
 - (void)reloadCurrentThenOtherPanes;
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex;

@@ -136,7 +136,8 @@
      */
     
     _pageControl = [[UIPageControl alloc] init];
-    [_pageControl setFrame:CGRectMake(0.0, contentFrame.size.height, self.view.frame.size.width, 20.0)];
+    [_pageControl setBackgroundColor:[UIColor colorWithRed:0.25f green:0.25f blue:0.24f alpha:0.5f]];
+    [_pageControl setFrame:CGRectMake(0.0, contentFrame.size.height - 8, self.view.frame.size.width, 30.0)];
     [_pageControl setNumberOfPages:[self.childViewControllers count]];
     [_pageControl addTarget:self action:@selector(paginate:forEvent:) forControlEvents:UIControlEventTouchUpInside];
     [self.navigationController.view addSubview:_pageControl];
@@ -149,8 +150,8 @@
     
     UIButton *refreshButton = [[UIButton alloc] init];
     [refreshButton setImage:[UIImage imageNamed:@"01-refresh"] forState:UIControlStateNormal];
-    [refreshButton addTarget:self action:@selector(reloadAllPanes) forControlEvents:UIControlEventTouchUpInside];
-    [refreshButton setFrame:CGRectMake(276, contentFrame.size.height - 10, 27, 27)];
+    [refreshButton addTarget:self action:@selector(reloadCurrentThenOtherPanes) forControlEvents:UIControlEventTouchUpInside];
+    [refreshButton setFrame:CGRectMake(290, contentFrame.size.height - 2, 27, 18)];
     [self.navigationController.view addSubview:refreshButton];
     
     /*
@@ -160,7 +161,7 @@
     UIButton *shareButton = [[UIButton alloc] init];
     [shareButton setImage:[UIImage imageNamed:@"212-action2"] forState:UIControlStateNormal];
     [shareButton addTarget:self action:@selector(share) forControlEvents:UIControlEventTouchUpInside];
-    [shareButton setFrame:CGRectMake(10, contentFrame.size.height - 10, 27, 27)];
+    [shareButton setFrame:CGRectMake(5, contentFrame.size.height - 2, 27, 18)];
     [self.navigationController.view addSubview:shareButton];
     
     self.sharingSheet = [[UIActionSheet alloc] initWithTitle:@"Share Sitegeist" delegate:self cancelButtonTitle:nil destructiveButtonTitle:nil otherButtonTitles:nil];
@@ -176,6 +177,10 @@
     }
     [self.sharingSheet addButtonWithTitle:@"Cancel"];
     self.sharingSheet.cancelButtonIndex = self.sharingSheet.numberOfButtons - 1;
+    
+    /*
+     * other stuff
+     */
     
     [self createGestureRecognizer];
     
@@ -289,15 +294,6 @@
             }
         }
     }
-}
-
-- (void)reloadAllPanes
-{
-    [_censusController reloadPane];
-    [_housingController reloadPane];
-    [_cultureController reloadPane];
-    [_environmentController reloadPane];
-    [_historyController reloadPane];
 }
 
 - (void)nextPane

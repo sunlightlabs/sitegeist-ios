@@ -12,6 +12,7 @@
 @interface SFPaneViewController () <UIWebViewDelegate>
 
 @property (nonatomic, retain) NSString* urlEndpoint;
+@property (nonatomic, retain) UIActivityIndicatorView *activityIndicator;
 
 @end
 
@@ -28,6 +29,16 @@
     [_paneView setDelegate:self];
     [_paneView setBackgroundColor:[UIColor colorWithRed:0.30f green:0.29f blue:0.29f alpha:1.0f]];
     self.view = _paneView;
+    
+    /*
+     * activity indicator
+     */
+    
+    self.activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+    [self.activityIndicator setHidesWhenStopped:YES];
+    [self.activityIndicator setFrame:CGRectMake(0, 150, 320, 80)];
+    [self.view addSubview:self.activityIndicator];
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,6 +108,7 @@
 - (void)reloadPane
 {
     NSLog(@"Reloading endpoint: %@", self.urlEndpoint);
+    [self.activityIndicator startAnimating];
     [self loadURL:self.urlEndpoint];
 }
 
@@ -107,8 +119,10 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    NSLog(@"Web view did finish loading");
     [_paneView fadeIn];
+    if ([self.activityIndicator isAnimating]) {
+        [self.activityIndicator stopAnimating];
+    }
 }
 
 - (BOOL)webView:(UIWebView *)inWeb shouldStartLoadWithRequest:(NSURLRequest *)inRequest navigationType:(UIWebViewNavigationType)inType {

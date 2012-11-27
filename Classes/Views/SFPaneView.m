@@ -26,7 +26,7 @@
     [UIView beginAnimations:nil context:NULL];
     [UIView setAnimationDuration:0.5f];
     [UIView setAnimationDelegate:self];
-    [self setAlpha:0.0f];
+    [self setAlpha:0.5f];
     [UIView commitAnimations];
 }
 

@@ -10,6 +10,7 @@
 #import "SFLocationView.h"
 #import "SFLocationViewController.h"
 #import "SFSitegeistViewController.h"
+#import "WildcardGestureRecognizer.h"
 #import <MapKit/MapKit.h>
 
 @interface SFLocationViewController ()
@@ -52,7 +53,7 @@
         
         _localButton = [[UIButton alloc] init];
         [_localButton setBackgroundColor:[UIColor colorWithRed:0.72f green:0.67f blue:0.76f alpha:1.0f]];
-        [_localButton setFrame:CGRectMake(10.0, 320.0, 300.0, 40.0)];
+        [_localButton setFrame:CGRectMake(10.0, 360.0, 300.0, 40.0)];
         [_localButton setTitle:@"Set Current Location" forState:UIControlStateNormal];
         [_localButton addTarget:self action:@selector(setCurrentLocation) forControlEvents:UIControlEventTouchUpInside];
         [self.view addSubview:_localButton];
@@ -60,28 +61,35 @@
         
         if (cll) {
             
-            _homeButton = [[UIButton alloc] init];
-            [_homeButton setBackgroundColor:[UIColor colorWithRed:0.72f green:0.67f blue:0.76f alpha:1.0f]];
-            [_homeButton setFrame:CGRectMake(10.0, 370.0, 300.0, 40.0)];
-            [_homeButton setTitle:@"Set Home Location" forState:UIControlStateNormal];
-            [_homeButton addTarget:self action:@selector(setHomeLocation) forControlEvents:UIControlEventTouchUpInside];
-            [self.view addSubview:_homeButton];
-                        
+//            _homeButton = [[UIButton alloc] init];
+//            [_homeButton setBackgroundColor:[UIColor colorWithRed:0.72f green:0.67f blue:0.76f alpha:1.0f]];
+//            [_homeButton setFrame:CGRectMake(10.0, 370.0, 300.0, 40.0)];
+//            [_homeButton setTitle:@"Set Home Location" forState:UIControlStateNormal];
+//            [_homeButton addTarget:self action:@selector(setHomeLocation) forControlEvents:UIControlEventTouchUpInside];
+//            [self.view addSubview:_homeButton];
+            
             _cancelButton = [[UIButton alloc] init];
             [_cancelButton setBackgroundColor:[UIColor lightGrayColor]];
             [_cancelButton setTitle:@"Cancel" forState:UIControlStateNormal];
             [_cancelButton addTarget:self action:@selector(cancelLocation) forControlEvents:UIControlEventTouchUpInside];
-            [_cancelButton setFrame:CGRectMake(10.0, 420.0, 300.0, 40.0)];
+            [_cancelButton setFrame:CGRectMake(10.0, 410.0, 300.0, 40.0)];
             [self.view addSubview:_cancelButton];
             
         }
         
-        UILongPressGestureRecognizer *gr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
-        [gr setMinimumPressDuration:0.3];
+        UILongPressGestureRecognizer *longPressGr = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongPress:)];
+        [longPressGr setMinimumPressDuration:0.3];
+        
+
+        WildcardGestureRecognizer *tapInterceptor = [[WildcardGestureRecognizer alloc] init];
+        tapInterceptor.touchesBeganCallback = ^(NSSet * touches, UIEvent * event) {
+            NSLog(@"touched map");
+            self.mapMoved = YES;
+        };
         
         UILabel *howtoLabel = [[UILabel alloc] init];
         [howtoLabel setBackgroundColor:[UIColor clearColor]];
-        [howtoLabel setFrame:CGRectMake(0, 285.0, 320.0, 15.0)];
+        [howtoLabel setFrame:CGRectMake(0, 325.0, 320.0, 15.0)];
         [howtoLabel setFont:[UIFont systemFontOfSize:11.0]];
         [howtoLabel setTextColor:[UIColor lightGrayColor]];
         [howtoLabel setTextAlignment:NSTextAlignmentCenter];
@@ -89,9 +97,10 @@
         [self.view addSubview:howtoLabel];
         
         _mapView = [[MKMapView alloc] init];
-        [_mapView setFrame:CGRectMake(0.0, 0.0, 320.0, 280.0)];
+        [_mapView setFrame:CGRectMake(0.0, 0.0, 320.0, 320.0)];
         [_mapView setDelegate:self];
-        [_mapView addGestureRecognizer:gr];
+        [_mapView addGestureRecognizer:longPressGr];
+        [_mapView addGestureRecognizer:tapInterceptor];
         [_mapView setShowsUserLocation:YES];
         
         [self.view addSubview:_mapView];
@@ -105,24 +114,13 @@
     return self;
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (void)setLocationForKey:(NSString *)key
 {
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
     CLLocationCoordinate2D loc = _mapView.centerCoordinate;
     NSArray *locArray = [[NSArray alloc] initWithObjects:[NSNumber numberWithDouble:loc.latitude], [NSNumber numberWithDouble:loc.longitude], nil];
     [userDefaults setObject:locArray forKey:key];
+    [userDefaults synchronize];
 }
 
 - (void)setHomeLocation
@@ -158,14 +156,7 @@
 
 }
 
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    if (!self.mapMoved) {
-        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000.0, 2000.0);
-        [mapView setRegion:region animated:TRUE];
-        [_mapPin setCoordinate:userLocation.coordinate];
-    }
-}
+#pragma mark - UIGestureRecognizer
 
 - (void)handleLongPress:(UIGestureRecognizer *)gestureRecognizer
 {
@@ -179,5 +170,21 @@
     [_mapView setCenterCoordinate:coord animated:YES];
     [_mapPin setCoordinate:coord];
 }
+
+#pragma mark - MKMapViewDelegate
+
+- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
+{
+    if (!self.mapMoved) {
+        MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 2000.0, 2000.0);
+        [mapView setRegion:region animated:TRUE];
+        [_mapPin setCoordinate:userLocation.coordinate];
+    }
+}
+
+//- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+//{
+//    NSLog(@"regionDidChange:%c", animated);
+//}
 
 @end
