@@ -698,6 +698,8 @@
 		3FD00D1216133E6C0096596F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sunlight Foundation";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sunlight Foundation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/Sitegeist iOS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Sitegeist iOS-Info.plist";
@@ -707,6 +709,8 @@
 					"\"$(SRCROOT)/Vendor/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "CEC79AE3-4750-4251-B10D-A473AD528E82";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "CEC79AE3-4750-4251-B10D-A473AD528E82";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -715,6 +719,8 @@
 		3FD00D1316133E6C0096596F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Sunlight Foundation";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Sunlight Foundation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Other Sources/Sitegeist iOS-Prefix.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/Resources/Sitegeist iOS-Info.plist";
@@ -724,6 +730,8 @@
 					"\"$(SRCROOT)/Vendor/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "FF18F8E6-E8D1-4AC2-8A34-7C43A1BFD63A";
+				"PROVISIONING_PROFILE[sdk=*]" = "FF18F8E6-E8D1-4AC2-8A34-7C43A1BFD63A";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};

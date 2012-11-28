@@ -49,7 +49,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    [self.mainController reloadCurrentThenOtherPanes];
+//    [self.mainController reloadCurrentThenOtherPanes];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -224,7 +224,7 @@
     if ([buttonTitle isEqualToString:@"Twitter"]) {
     
         SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-        [composer setInitialText:@"Discover what's around you with Sitegeist from @sunfoundation"];
+        [composer setInitialText:@"With just a tap, better understand what's around you using Sitegeist from @sunfoundation #opengov"];
         [composer addURL:[NSURL URLWithString:url]];
         [composer addImage:screenshot];
         [self presentViewController:composer animated:YES completion:nil];
@@ -232,14 +232,14 @@
     } else if ([buttonTitle isEqualToString:@"Facebook"]) {
     
         SLComposeViewController *composer = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-        [composer setInitialText:@"Discover what's around you with Sitegeist from Sunlight Foundation."];
+        [composer setInitialText:@"With just a tap, better understand what's around you using Sitegeist from the Sunlight Foundation."];
         [composer addURL:[NSURL URLWithString:url]];
         [composer addImage:screenshot];
         [self presentViewController:composer animated:YES completion:nil];
         
     } else if ([buttonTitle isEqualToString:@"Email"]) {
     
-        NSString *body = url;
+        NSString *body = [NSString stringWithFormat:@"With just a tap, better understand what's around you using Sitegeist from the Sunlight Foundation.\n\n%@", url];
     
         MFMailComposeViewController *mailer = [[MFMailComposeViewController alloc] init];
         mailer.mailComposeDelegate = self;
