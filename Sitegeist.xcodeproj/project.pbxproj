@@ -59,6 +59,8 @@
 		3F2D6FCE161C9A57001E7791 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F2D6FCD161C9A57001E7791 /* MapKit.framework */; };
 		3F5A07BD165AC98D0097AB45 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A07BB165AC98D0097AB45 /* 01-refresh.png */; };
 		3F5A07BE165AC98D0097AB45 /* 01-refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */; };
+		3F665461169CBD6D0004B6A1 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 3F665460169CBD6D0004B6A1 /* LICENSE */; };
+		3F665463169CBE750004B6A1 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 3F665462169CBE750004B6A1 /* README.md */; };
 		3F7B6DE11641D30900E05471 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7B6DE01641D30900E05471 /* MessageUI.framework */; };
 		3F862F83166561D8003BFBDF /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F862F82166561D8003BFBDF /* WildcardGestureRecognizer.m */; };
 		3F9D7D7E1639E3E4001793C4 /* 212-action2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D7D7C1639E3E4001793C4 /* 212-action2.png */; };
@@ -149,6 +151,8 @@
 		3F5A07BB165AC98D0097AB45 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
 		3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh@2x.png"; sourceTree = "<group>"; };
 		3F66545E169CBA1A0004B6A1 /* Sitegeist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sitegeist.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F665460169CBD6D0004B6A1 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		3F665462169CBE750004B6A1 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		3F7B6DE01641D30900E05471 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3F862F81166561D8003BFBDF /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
 		3F862F82166561D8003BFBDF /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
@@ -347,6 +351,8 @@
 				3F0CFE311631AF0100FAA6DD /* Resources */,
 				3F0CFE871631C4BF00FAA6DD /* Vendor */,
 				3FD00CE116133E6B0096596F /* Frameworks */,
+				3F665462169CBE750004B6A1 /* README.md */,
+				3F665460169CBD6D0004B6A1 /* LICENSE */,
 				3F66545E169CBA1A0004B6A1 /* Sitegeist.app */,
 			);
 			sourceTree = "<group>";
@@ -452,6 +458,8 @@
 				3F2CC969165D693300D9E46A /* 298-circlex@2x.png in Resources */,
 				3FF4D4F6165D714A00C9BC66 /* 42-info.png in Resources */,
 				3FF4D4F7165D714A00C9BC66 /* 42-info@2x.png in Resources */,
+				3F665461169CBD6D0004B6A1 /* LICENSE in Resources */,
+				3F665463169CBE750004B6A1 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
