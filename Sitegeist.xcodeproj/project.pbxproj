@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F0185B81656F33900542BF5 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0185B71656F33900542BF5 /* Icon.png */; };
-		3F0185BA1656F33E00542BF5 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0185B91656F33E00542BF5 /* Icon@2x.png */; };
 		3F0CFE271631AEFB00FAA6DD /* SFLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE141631AEFB00FAA6DD /* SFLocationViewController.m */; };
 		3F0CFE281631AEFB00FAA6DD /* SFPaneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE161631AEFB00FAA6DD /* SFPaneViewController.m */; };
 		3F0CFE291631AEFB00FAA6DD /* SFRadarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE181631AEFB00FAA6DD /* SFRadarViewController.m */; };
@@ -36,7 +34,7 @@
 		3F0CFE581631AF0100FAA6DD /* history.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE441631AF0100FAA6DD /* history.jpg */; };
 		3F0CFE591631AF0100FAA6DD /* housing.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE451631AF0100FAA6DD /* housing.jpg */; };
 		3F0CFE5A1631AF0100FAA6DD /* people.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE461631AF0100FAA6DD /* people.jpg */; };
-		3F0CFE5B1631AF0100FAA6DD /* Sitegeist iOS-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE471631AF0100FAA6DD /* Sitegeist iOS-Info.plist */; };
+		3F0CFE5B1631AF0100FAA6DD /* Sitegeist-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3F0CFE471631AF0100FAA6DD /* Sitegeist-Info.plist */; };
 		3F0CFE5F1631B2B200FAA6DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE5D1631B2B200FAA6DD /* main.m */; };
 		3F0CFE691631B3F900FAA6DD /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F0CFE681631B3F900FAA6DD /* libz.dylib */; };
 		3F0CFEA11631C4C000FAA6DD /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F0CFE8A1631C4BF00FAA6DD /* AFHTTPClient.m */; };
@@ -63,9 +61,6 @@
 		3F5A07BE165AC98D0097AB45 /* 01-refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */; };
 		3F7B6DE11641D30900E05471 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F7B6DE01641D30900E05471 /* MessageUI.framework */; };
 		3F862F83166561D8003BFBDF /* WildcardGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F862F82166561D8003BFBDF /* WildcardGestureRecognizer.m */; };
-		3F862F86166573CF003BFBDF /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F862F85166573CF003BFBDF /* Default.png */; };
-		3F862F88166573D7003BFBDF /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F862F87166573D7003BFBDF /* Default@2x.png */; };
-		3F862F8A166573DB003BFBDF /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F862F89166573DB003BFBDF /* Default-568h@2x.png */; };
 		3F9D7D7E1639E3E4001793C4 /* 212-action2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D7D7C1639E3E4001793C4 /* 212-action2.png */; };
 		3F9D7D7F1639E3E4001793C4 /* 212-action2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F9D7D7D1639E3E4001793C4 /* 212-action2@2x.png */; };
 		3F9D7D821639EACA001793C4 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F9D7D811639EACA001793C4 /* Social.framework */; };
@@ -73,28 +68,11 @@
 		3FD00CE316133E6B0096596F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE216133E6B0096596F /* UIKit.framework */; };
 		3FD00CE516133E6B0096596F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE416133E6B0096596F /* Foundation.framework */; };
 		3FD00CE716133E6B0096596F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE616133E6B0096596F /* CoreGraphics.framework */; };
-		3FD00D0116133E6C0096596F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00D0016133E6C0096596F /* SenTestingKit.framework */; };
-		3FD00D0216133E6C0096596F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE216133E6B0096596F /* UIKit.framework */; };
-		3FD00D0316133E6C0096596F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FD00CE416133E6B0096596F /* Foundation.framework */; };
-		3FD00D0B16133E6C0096596F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3FD00D0916133E6C0096596F /* InfoPlist.strings */; };
-		3FD00D0E16133E6C0096596F /* Sitegeist_iOSTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FD00D0D16133E6C0096596F /* Sitegeist_iOSTests.m */; };
 		3FF4D4F6165D714A00C9BC66 /* 42-info.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4D4F4165D714A00C9BC66 /* 42-info.png */; };
 		3FF4D4F7165D714A00C9BC66 /* 42-info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FF4D4F5165D714A00C9BC66 /* 42-info@2x.png */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		3FD00D0416133E6C0096596F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 3FD00CD516133E6B0096596F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 3FD00CDD16133E6B0096596F;
-			remoteInfo = "Sitegeist iOS";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		3F0185B71656F33900542BF5 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		3F0185B91656F33E00542BF5 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3F0CFE131631AEFB00FAA6DD /* SFLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFLocationViewController.h; sourceTree = "<group>"; };
 		3F0CFE141631AEFB00FAA6DD /* SFLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SFLocationViewController.m; sourceTree = "<group>"; };
 		3F0CFE151631AEFB00FAA6DD /* SFPaneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SFPaneViewController.h; sourceTree = "<group>"; };
@@ -131,9 +109,9 @@
 		3F0CFE441631AF0100FAA6DD /* history.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = history.jpg; sourceTree = "<group>"; };
 		3F0CFE451631AF0100FAA6DD /* housing.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = housing.jpg; sourceTree = "<group>"; };
 		3F0CFE461631AF0100FAA6DD /* people.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = people.jpg; sourceTree = "<group>"; };
-		3F0CFE471631AF0100FAA6DD /* Sitegeist iOS-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sitegeist iOS-Info.plist"; sourceTree = "<group>"; };
+		3F0CFE471631AF0100FAA6DD /* Sitegeist-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Sitegeist-Info.plist"; sourceTree = "<group>"; };
 		3F0CFE5D1631B2B200FAA6DD /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3F0CFE5E1631B2B200FAA6DD /* Sitegeist iOS-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sitegeist iOS-Prefix.pch"; sourceTree = "<group>"; };
+		3F0CFE5E1631B2B200FAA6DD /* Sitegeist-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Sitegeist-Prefix.pch"; sourceTree = "<group>"; };
 		3F0CFE681631B3F900FAA6DD /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		3F0CFE891631C4BF00FAA6DD /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		3F0CFE8A1631C4BF00FAA6DD /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
@@ -170,26 +148,18 @@
 		3F2D6FCD161C9A57001E7791 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3F5A07BB165AC98D0097AB45 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh.png"; sourceTree = "<group>"; };
 		3F5A07BC165AC98D0097AB45 /* 01-refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "01-refresh@2x.png"; sourceTree = "<group>"; };
+		3F66545E169CBA1A0004B6A1 /* Sitegeist.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sitegeist.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F7B6DE01641D30900E05471 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		3F862F81166561D8003BFBDF /* WildcardGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WildcardGestureRecognizer.h; sourceTree = "<group>"; };
 		3F862F82166561D8003BFBDF /* WildcardGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WildcardGestureRecognizer.m; sourceTree = "<group>"; };
-		3F862F85166573CF003BFBDF /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		3F862F87166573D7003BFBDF /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		3F862F89166573DB003BFBDF /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		3F9D7D7C1639E3E4001793C4 /* 212-action2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "212-action2.png"; sourceTree = "<group>"; };
 		3F9D7D7D1639E3E4001793C4 /* 212-action2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "212-action2@2x.png"; sourceTree = "<group>"; };
 		3F9D7D811639EACA001793C4 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
-		3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sitegeist iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sitegeist iOSTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FC5C9A416139ECF0078EA3A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		3FD00CE216133E6B0096596F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3FD00CE416133E6B0096596F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3FD00CE616133E6B0096596F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		3FD00D0016133E6C0096596F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
-		3FD00D0816133E6C0096596F /* Sitegeist iOSTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sitegeist iOSTests-Info.plist"; sourceTree = "<group>"; };
-		3FD00D0A16133E6C0096596F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		3FD00D0C16133E6C0096596F /* Sitegeist_iOSTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Sitegeist_iOSTests.h; sourceTree = "<group>"; };
-		3FD00D0D16133E6C0096596F /* Sitegeist_iOSTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Sitegeist_iOSTests.m; sourceTree = "<group>"; };
 		3FF4D4F4165D714A00C9BC66 /* 42-info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-info.png"; sourceTree = "<group>"; };
 		3FF4D4F5165D714A00C9BC66 /* 42-info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "42-info@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -209,16 +179,6 @@
 				3FD00CE516133E6B0096596F /* Foundation.framework in Frameworks */,
 				3FD00CE716133E6B0096596F /* CoreGraphics.framework in Frameworks */,
 				3F0CFEAA1631C4C000FAA6DD /* libTestFlight.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3FD00CFB16133E6C0096596F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FD00D0116133E6C0096596F /* SenTestingKit.framework in Frameworks */,
-				3FD00D0216133E6C0096596F /* UIKit.framework in Frameworks */,
-				3FD00D0316133E6C0096596F /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,7 +238,7 @@
 				3F0CFE321631AF0100FAA6DD /* InfoPlist.strings */,
 				3F0CFE341631AF0100FAA6DD /* Images */,
 				3F0CFE411631AF0100FAA6DD /* Mockups */,
-				3F0CFE471631AF0100FAA6DD /* Sitegeist iOS-Info.plist */,
+				3F0CFE471631AF0100FAA6DD /* Sitegeist-Info.plist */,
 			);
 			path = Resources;
 			sourceTree = SOURCE_ROOT;
@@ -328,7 +288,7 @@
 			isa = PBXGroup;
 			children = (
 				3F0CFE5D1631B2B200FAA6DD /* main.m */,
-				3F0CFE5E1631B2B200FAA6DD /* Sitegeist iOS-Prefix.pch */,
+				3F0CFE5E1631B2B200FAA6DD /* Sitegeist-Prefix.pch */,
 			);
 			path = "Other Sources";
 			sourceTree = "<group>";
@@ -382,21 +342,12 @@
 		3FD00CD316133E6B0096596F = {
 			isa = PBXGroup;
 			children = (
-				3F862F89166573DB003BFBDF /* Default-568h@2x.png */,
-				3F862F87166573D7003BFBDF /* Default@2x.png */,
-				3F862F85166573CF003BFBDF /* Default.png */,
-				3F0185B91656F33E00542BF5 /* Icon@2x.png */,
-				3F0185B71656F33900542BF5 /* Icon.png */,
-				3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */,
-				3F7B6DE01641D30900E05471 /* MessageUI.framework */,
 				3F0CFE111631AEFB00FAA6DD /* Classes */,
 				3F0CFE5C1631B2B200FAA6DD /* Other Sources */,
 				3F0CFE311631AF0100FAA6DD /* Resources */,
 				3F0CFE871631C4BF00FAA6DD /* Vendor */,
-				3FD00D0616133E6C0096596F /* Sitegeist iOSTests */,
 				3FD00CE116133E6B0096596F /* Frameworks */,
-				3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */,
-				3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */,
+				3F66545E169CBA1A0004B6A1 /* Sitegeist.app */,
 			);
 			sourceTree = "<group>";
 			usesTabs = 0;
@@ -404,6 +355,8 @@
 		3FD00CE116133E6B0096596F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F0E8BEE16486441008030A9 /* SystemConfiguration.framework */,
+				3F7B6DE01641D30900E05471 /* MessageUI.framework */,
 				3F9D7D811639EACA001793C4 /* Social.framework */,
 				3F0CFE681631B3F900FAA6DD /* libz.dylib */,
 				3F2D6FCD161C9A57001E7791 /* MapKit.framework */,
@@ -416,31 +369,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3FD00D0616133E6C0096596F /* Sitegeist iOSTests */ = {
-			isa = PBXGroup;
-			children = (
-				3FD00D0C16133E6C0096596F /* Sitegeist_iOSTests.h */,
-				3FD00D0D16133E6C0096596F /* Sitegeist_iOSTests.m */,
-				3FD00D0716133E6C0096596F /* Supporting Files */,
-			);
-			path = "Sitegeist iOSTests";
-			sourceTree = "<group>";
-		};
-		3FD00D0716133E6C0096596F /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				3FD00D0816133E6C0096596F /* Sitegeist iOSTests-Info.plist */,
-				3FD00D0916133E6C0096596F /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3FD00CDD16133E6B0096596F /* Sitegeist iOS */ = {
+		3FD00CDD16133E6B0096596F /* Sitegeist */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3FD00D1116133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOS" */;
+			buildConfigurationList = 3FD00D1116133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist" */;
 			buildPhases = (
 				3FD00CDA16133E6B0096596F /* Sources */,
 				3FD00CDB16133E6B0096596F /* Frameworks */,
@@ -450,29 +384,10 @@
 			);
 			dependencies = (
 			);
-			name = "Sitegeist iOS";
+			name = Sitegeist;
 			productName = "Sitegeist iOS";
-			productReference = 3FC5C9A1161397860078EA3A /* Sitegeist iOS.app */;
+			productReference = 3F66545E169CBA1A0004B6A1 /* Sitegeist.app */;
 			productType = "com.apple.product-type.application";
-		};
-		3FD00CFE16133E6C0096596F /* Sitegeist iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 3FD00D1416133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOSTests" */;
-			buildPhases = (
-				3FD00CFA16133E6C0096596F /* Sources */,
-				3FD00CFB16133E6C0096596F /* Frameworks */,
-				3FD00CFC16133E6C0096596F /* Resources */,
-				3FD00CFD16133E6C0096596F /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				3FD00D0516133E6C0096596F /* PBXTargetDependency */,
-			);
-			name = "Sitegeist iOSTests";
-			productName = "Sitegeist iOSTests";
-			productReference = 3FC5C9A3161397860078EA3A /* Sitegeist iOSTests.octest */;
-			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -484,7 +399,7 @@
 				LastUpgradeCheck = 0450;
 				ORGANIZATIONNAME = "Sunlight Foundation";
 			};
-			buildConfigurationList = 3FD00CD816133E6B0096596F /* Build configuration list for PBXProject "Sitegeist iOS" */;
+			buildConfigurationList = 3FD00CD816133E6B0096596F /* Build configuration list for PBXProject "Sitegeist" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -496,8 +411,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3FD00CDD16133E6B0096596F /* Sitegeist iOS */,
-				3FD00CFE16133E6C0096596F /* Sitegeist iOSTests */,
+				3FD00CDD16133E6B0096596F /* Sitegeist */,
 			);
 		};
 /* End PBXProject section */
@@ -525,13 +439,11 @@
 				3F0CFE581631AF0100FAA6DD /* history.jpg in Resources */,
 				3F0CFE591631AF0100FAA6DD /* housing.jpg in Resources */,
 				3F0CFE5A1631AF0100FAA6DD /* people.jpg in Resources */,
-				3F0CFE5B1631AF0100FAA6DD /* Sitegeist iOS-Info.plist in Resources */,
+				3F0CFE5B1631AF0100FAA6DD /* Sitegeist-Info.plist in Resources */,
 				3F0CFEAB1631C4C000FAA6DD /* README.md in Resources */,
 				3F0CFEAC1631C4C000FAA6DD /* release_notes.md in Resources */,
 				3F9D7D7E1639E3E4001793C4 /* 212-action2.png in Resources */,
 				3F9D7D7F1639E3E4001793C4 /* 212-action2@2x.png in Resources */,
-				3F0185B81656F33900542BF5 /* Icon.png in Resources */,
-				3F0185BA1656F33E00542BF5 /* Icon@2x.png in Resources */,
 				3F5A07BD165AC98D0097AB45 /* 01-refresh.png in Resources */,
 				3F5A07BE165AC98D0097AB45 /* 01-refresh@2x.png in Resources */,
 				3F2CC964165D640300D9E46A /* about.png in Resources */,
@@ -540,37 +452,10 @@
 				3F2CC969165D693300D9E46A /* 298-circlex@2x.png in Resources */,
 				3FF4D4F6165D714A00C9BC66 /* 42-info.png in Resources */,
 				3FF4D4F7165D714A00C9BC66 /* 42-info@2x.png in Resources */,
-				3F862F86166573CF003BFBDF /* Default.png in Resources */,
-				3F862F88166573D7003BFBDF /* Default@2x.png in Resources */,
-				3F862F8A166573DB003BFBDF /* Default-568h@2x.png in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3FD00CFC16133E6C0096596F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FD00D0B16133E6C0096596F /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		3FD00CFD16133E6C0096596F /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3FD00CDA16133E6B0096596F /* Sources */ = {
@@ -602,37 +487,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3FD00CFA16133E6C0096596F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3FD00D0E16133E6C0096596F /* Sitegeist_iOSTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		3FD00D0516133E6C0096596F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 3FD00CDD16133E6B0096596F /* Sitegeist iOS */;
-			targetProxy = 3FD00D0416133E6C0096596F /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		3F0CFE321631AF0100FAA6DD /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3F0CFE331631AF0100FAA6DD /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		3FD00D0916133E6C0096596F /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3FD00D0A16133E6C0096596F /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -701,15 +562,15 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sunlight Foundation";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sunlight Foundation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Other Sources/Sitegeist iOS-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Resources/Sitegeist iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Other Sources/Sitegeist-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Sitegeist-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FF18F8E6-E8D1-4AC2-8A34-7C43A1BFD63A";
+				PROVISIONING_PROFILE = "7F595DE6-CE9D-4490-9CF4-31A396FAB28D";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7F595DE6-CE9D-4490-9CF4-31A396FAB28D";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
@@ -722,59 +583,25 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Sunlight Foundation";
 				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Distribution: Sunlight Foundation";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Other Sources/Sitegeist iOS-Prefix.pch";
-				INFOPLIST_FILE = "$(SRCROOT)/Resources/Sitegeist iOS-Info.plist";
+				GCC_PREFIX_HEADER = "Other Sources/Sitegeist-Prefix.pch";
+				INFOPLIST_FILE = "Resources/Sitegeist-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Vendor/TestFlightSDK1.1\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "FF18F8E6-E8D1-4AC2-8A34-7C43A1BFD63A";
+				PROVISIONING_PROFILE = "7F595DE6-CE9D-4490-9CF4-31A396FAB28D";
 				"PROVISIONING_PROFILE[sdk=*]" = "7F595DE6-CE9D-4490-9CF4-31A396FAB28D";
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
 		};
-		3FD00D1516133E6C0096596F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sitegeist iOS.app/Sitegeist iOS";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sitegeist iOS/Sitegeist iOS-Prefix.pch";
-				INFOPLIST_FILE = "Sitegeist iOSTests/Sitegeist iOSTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		3FD00D1616133E6C0096596F /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sitegeist iOS.app/Sitegeist iOS";
-				FRAMEWORK_SEARCH_PATHS = (
-					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
-					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
-				);
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Sitegeist iOS/Sitegeist iOS-Prefix.pch";
-				INFOPLIST_FILE = "Sitegeist iOSTests/Sitegeist iOSTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3FD00CD816133E6B0096596F /* Build configuration list for PBXProject "Sitegeist iOS" */ = {
+		3FD00CD816133E6B0096596F /* Build configuration list for PBXProject "Sitegeist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FD00D0F16133E6C0096596F /* Debug */,
@@ -783,20 +610,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3FD00D1116133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOS" */ = {
+		3FD00D1116133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3FD00D1216133E6C0096596F /* Debug */,
 				3FD00D1316133E6C0096596F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		3FD00D1416133E6C0096596F /* Build configuration list for PBXNativeTarget "Sitegeist iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				3FD00D1516133E6C0096596F /* Debug */,
-				3FD00D1616133E6C0096596F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
